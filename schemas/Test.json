@@ -1,0 +1,28 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft/2020-12/schema#", 
+	"$id": "com.routeware.eventbus.Test", 
+	"title": "TestEvent", 
+	"type": "object",
+	"required": [
+		"message"
+	],
+	"properties": {
+		"message": {
+			"$id": "#root/message", 
+			"title": "Message", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"foobar"
+			],
+			"pattern": "^.*$"
+		},
+    "fail": {
+      "$id": "#root/fail",
+      "title": "Should Fail?",
+      "type": "number",
+      "default": 0
+    }
+	}
+}
