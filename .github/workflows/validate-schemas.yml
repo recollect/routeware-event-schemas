@@ -21,7 +21,16 @@ jobs:
       # Checks-out our repository under $GITHUB_WORKSPACE
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: List schema files
+      	run: ls -l $GITHUB_WORKSPACE/schemas/
 
+      # Install node so we can validate JSON schemas
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install Json Schema validator ajv
+        run: npm install --global ajv-cli
+
+      - name: Test ajv
+        run: ajv help
