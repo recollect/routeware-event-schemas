@@ -1,0 +1,27 @@
+# Workflow to validate all the JSON schemas present
+
+name: Validate Schemas
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    
+  # Allows us to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  # This workflow contains a single job called "build"
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out our repository under $GITHUB_WORKSPACE
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
