@@ -19,10 +19,6 @@ jobs:
       # Checks-out our repository under $GITHUB_WORKSPACE
       - uses: actions/checkout@v3
 
-      # Install `tree` utility
-      - name: "Install `tree` utility to create index.html"
-        run: sudo apt-get install -y tree
-
       - name: Build and upload schema repository website
         run: ./bin/upload-to-s3
         env:
