@@ -1,0 +1,31 @@
+# Workflow to upload schemas and examples to the S3 website
+
+name: Upload Schema Repository
+
+# Triggers the workflow when the `main` branch is updated
+on:
+  push:
+    branches:
+      - 'main'
+    
+  # Allows us to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out our repository under $GITHUB_WORKSPACE
+      - uses: actions/checkout@v3
+
+      # Install `tree` utility
+      - name: "Install `tree` utility to create index.html"
+        run: sudo apt-get install -y tree
+
+      - name: Build and upload schema repository website
+        run: ./bin/upload-to-s3
+          env:
+            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_SECRET }}
+            AWS_DEFAULT_REGION: 'us-west-2'

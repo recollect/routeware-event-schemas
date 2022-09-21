@@ -1,0 +1,31 @@
+#!/bin/bash
+set -e
+
+echo "Creating temp site directory"
+rm -rf site/
+mkdir site/
+cp -R examples schemas site
+
+echo "Creating index.html"
+cd site/
+tree -H '.' --noreport \
+    --charset utf-8 \
+    -o index.html \
+    -P '*.json' \
+    -T "Routeware Event Schema Repository"
+
+# Hide the copyright section, but leave it in the HTML
+perl -i -pe 's/\.VERSION {[^}]+}/.VERSION { display: none; }/' index.html
+perl -i -pe 's/(class="VERSION">)/$1\n\t\tRouteware Event Bus and Schemas are &copy; by Routeware Inc, 2022<br>/' index.html
+
+
+# Now publish to S3
+echo "Uploading files to S3 ..."
+set -x
+aws s3 cp index.html s3://routeware-event-schemas/index.html --acl public-read
+aws s3 cp --recursive schemas s3://routeware-event-schemas/schemas --acl public-read
+aws s3 cp --recursive examples s3://routeware-event-schemas/examples --acl public-read
+
+
+echo "\n\nWebsite is now available at:\n"
+echo "  https://routeware-event-schemas.s3-website-us-west-2.amazonaws.com/"
