@@ -1,6 +1,6 @@
 {
 	"definitions": {},
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "com.routeware.eventbus.Test", 
 	"title": "TestEvent", 
 	"type": "object",
@@ -18,11 +18,11 @@
 			],
 			"pattern": "^.*$"
 		},
-    "fail": {
-      "$id": "fail",
-      "title": "Should Fail?",
-      "type": "number",
-      "default": 0
-    }
+		"fail": {
+			"$id": "fail",
+			"title": "Should Fail?",
+			"type": "number",
+			"default": 0
+		}
 	}
 }
