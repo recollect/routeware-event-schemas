@@ -31,4 +31,3 @@ jobs:
 
       - name: Validate schemas
         run: ./bin/validate-schemas
-        working-directory: $GITHUB_WORKSPACE
