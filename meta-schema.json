@@ -1,0 +1,61 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Schema Schema",
+    "required": [
+        "$schema",
+        "$id",
+        "type",
+        "title",
+        "required",
+        "properties"
+    ],
+    "properties": {
+        "$schema": {
+            "type": "string",
+            "default": "",
+            "title": "The JSON schema being used",
+            "examples": [
+                "https://json-schema.org/draft/2020-12/schema"
+            ]
+        },
+        "$id": {
+            "type": "string",
+            "default": "",
+            "title": "A unique ID for this schema",
+            "examples": [
+                "https://routeware-event-schema.s3.us-east-1.amazonaws.com/Test.json"
+            ]
+        },
+        "type": {
+            "type": "string",
+            "default": "object",
+            "title": "The type of the top level data type - should be an 'object'"
+        },
+        "title": {
+            "type": "string",
+            "default": "",
+            "title": "The title of the Schema",
+            "examples": [
+                "Foo Schema"
+            ]
+        },
+        "required": {
+            "type": "array",
+            "default": [],
+            "title": "Array of required properties",
+            "items": {
+                "type": "string",
+                "default": ""
+            }
+        },
+        "properties": {
+            "type": "object",
+            "default": {},
+            "title": "The top level properties for this schema",
+            "required": [ ]
+        }
+    }
+}

@@ -1,0 +1,35 @@
+#!/bin/bash
+# set -x
+set -e
+
+# Script to run some validation to show that our schemas are all valid,
+# and then make sure the examples for each schema are also valid.
+
+# We use this as a meta-schema to evaluate our schemas. 
+# Note: We could probably use a more standard meta-schema one day.
+META_SCHEMA=meta-schema.json
+
+for schema in $(find schemas -type f); do
+  name=$(echo $schema |  cut -d/ -f2|cut -d. -f1)
+  echo "Validating schema $name"
+  ajv validate -s $META_SCHEMA -d $schema --spec draft2020
+  echo "=> Schema $name looks OK"
+
+  if [[ ! -d "examples/$name" ]]; then
+    echo "Schema $name lacks any examples! Please add at least one!"
+    exit -1
+  fi
+
+  examples=$(find examples/$name -type f)
+  if [[ "$examples" == "" ]]; then
+    echo "No examples found for schema $name! Please add at least one!"
+    exit -1;
+  fi
+
+  for eg in $examples; do
+    echo "=> Testing example $eg against the $name schema";
+    ajv validate -s $schema -d $eg --spec draft2020
+    echo "  => $eg looks good!"
+  done
+
+done

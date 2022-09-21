@@ -21,9 +21,6 @@ jobs:
       # Checks-out our repository under $GITHUB_WORKSPACE
       - uses: actions/checkout@v3
 
-      - name: List schema files
-        run: echo $GITHUB_WORKSPACE
-
       # Install node so we can validate JSON schemas
       - uses: actions/setup-node@v3
         with:
@@ -32,5 +29,6 @@ jobs:
       - name: Install Json Schema validator ajv
         run: npm install --global ajv-cli
 
-      - name: Test ajv
-        run: ajv help
+      - name: Validate schemas
+        run: ./bin/validate-schemas
+        working-directory: $GITHUB_WORKSPACE
