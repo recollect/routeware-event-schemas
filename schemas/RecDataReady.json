@@ -5,10 +5,10 @@
     "default": {},
     "title": "RecDataReady Schema",
     "required": [
-        "input_file_url"
+        "input_file_urlaaaa"
     ],
     "properties": {
-        "input_file_url": {
+        "input_file_urlaaaa": {
             "type": "string",
             "default": "",
             "title": "URL to the input file to be processed",
