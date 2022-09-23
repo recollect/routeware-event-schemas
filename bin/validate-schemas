@@ -32,7 +32,7 @@ for schema in $(find schemas -type f); do
   fi
 
   printf "=> Checking for matching schema ID\n"
-  if grep '"$id": "com.routeware.eventbus.$name" $schema; then
+  if grep "\"$id\": \"com.routeware.eventbus.$name\"" $schema; then
     printf "${GREEN}  => Using a correct schema ID${ENDCOLOR}\n";
   else
     printf "${ERROR}  => Schema $schema \$id is bad.  Should be: com.routeware.eventbus.$name\n"
