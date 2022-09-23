@@ -2,7 +2,7 @@
 	"definitions": {},
         "$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "com.routeware.eventbus.Test", 
-	"title": "TestEvent", 
+	"title": "Test Event", 
 	"type": "object",
 	"required": [
 		"message"
