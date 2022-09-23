@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "http://example.com/RecDataReady.json",
+    "$id": "com.routeware.eventbus.RecDataReady",
     "type": "object",
     "default": {},
     "title": "RecDataReady Schema",
