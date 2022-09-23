@@ -28,7 +28,7 @@ for schema in $(find schemas -type f); do
     printf "${GREEN}  => Using correct schema${ENDCOLOR}\n"
   else
     printf "${ERROR}  => Schema $schema is not using the correct schema\n"
-    exit -1
+    exit -1;
   fi
 
   printf "=> Checking for matching schema ID\n"
@@ -36,7 +36,7 @@ for schema in $(find schemas -type f); do
     printf "${GREEN}  => Using a correct schema ID${ENDCOLOR}\n";
   else
     printf "${ERROR}  => Schema $schema \$id is bad.  Should be: com.routeware.eventbus.$name\n"
-    exit;
+    exit -1;
   fi
   
 
@@ -44,13 +44,13 @@ for schema in $(find schemas -type f); do
 
   if [[ ! -d "examples/$name" ]]; then
     printf "${ERROR}=> Schema $name lacks any examples! Please add at least one in examples/$name/\n"
-    exit;
+    exit -1;
   fi
 
   examples=$(find examples/$name -type f)
   if [[ "$examples" == "" ]]; then
     printf "${ERROR}=> No examples found for schema $name! Please add at least one in examples/$name/\n"
-    exit;
+    exit -1;
   fi
 
   for eg in $examples; do
