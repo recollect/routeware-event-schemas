@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+BUCKET=routeware.events
+
 echo "Creating temp site directory"
 rm -rf site/
 mkdir site/
@@ -22,10 +24,10 @@ perl -i -pe 's/(class="VERSION">)/$1\n\t\tRouteware Event Bus and Schemas are &c
 # Now publish to S3
 echo "Uploading files to S3 ..."
 set -x
-aws s3 cp index.html s3://routeware-event-schemas/index.html --acl public-read
-aws s3 cp --recursive schemas s3://routeware-event-schemas/schemas --acl public-read
-aws s3 cp --recursive examples s3://routeware-event-schemas/examples --acl public-read
+aws s3 cp index.html s3://$BUCKET/index.html --acl public-read
+aws s3 cp --recursive schemas s3://$BUCKET/schemas --acl public-read
+aws s3 cp --recursive examples s3://$BUCKET/examples --acl public-read
 
 
 echo "\n\nWebsite is now available at:\n"
-echo "  http://routeware-event-schemas.s3-website-us-west-2.amazonaws.com/"
+echo "  http://$BUCKET/"
