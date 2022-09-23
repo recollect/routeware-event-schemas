@@ -1,0 +1,23 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "RecDataReady Schema",
+    "required": [
+        "input_file_url"
+    ],
+    "properties": {
+        "input_file_url": {
+            "type": "string",
+            "default": "",
+            "title": "URL to the input file to be processed",
+            "examples": [
+                "https://example.com/path/to/some/file"
+            ]
+        }
+    },
+    "examples": [{
+        "input_file_url": "https://example.com/path/to/some/file"
+    }]
+}
