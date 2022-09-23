@@ -18,7 +18,7 @@ ENDCOLOR="\e[0m"
 
 for schema in $(find schemas -type f); do
   name=$(echo $schema |  cut -d/ -f2|cut -d. -f1)
-  printf "::notice file=$schema::Validating schema $name${ENDCOLOR}\n"
+  printf "::notice file=$schema::Validating schema $name\n"
   ERROR="::error file=$schema::"
 
   ajv validate -s $META_SCHEMA -d $schema --spec draft2020
@@ -59,7 +59,7 @@ for schema in $(find schemas -type f); do
     printf "  => $eg looks good!\n"
   done
 
-  printf "${GREEN}::notice file=$schema::Schema $name looks good, examples all validate!${ENDCOLOR}\n\n"
+  printf "${GREEN}::notice file=$schema::Schema $name looks good, examples all validate!\n\n"
 done
 
 printf "${GREEN}\n\nALL SCHEMAS LOOK GOOD, Nice work team!\n"
