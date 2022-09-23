@@ -15,16 +15,19 @@ GREEN="\e[32m"
 YELLOW="\e[33m"
 ENDCOLOR="\e[0m"
 
+
 for schema in $(find schemas -type f); do
   name=$(echo $schema |  cut -d/ -f2|cut -d. -f1)
   printf "${YELLOW}Validating schema $name${ENDCOLOR}\n"
+  ERROR="::error file=$schema::$RED"
+
   ajv validate -s $META_SCHEMA -d $schema --spec draft2020
 
   printf "=> Checking for 2020-12 schema\n"
   if grep '"$schema": "https://json-schema.org/draft/2020-12/schema"' $schema; then
     printf "${GREEN}  => Using correct schema${ENDCOLOR}\n"
   else
-    printf "${RED}  => Schema $schema is not using the correct schema\n"
+    printf "${ERROR}  => Schema $schema is not using the correct schema\n"
     exit -1
   fi
 
@@ -32,7 +35,7 @@ for schema in $(find schemas -type f); do
   if grep '"$id": "com.routeware.eventbus.' $schema; then
     printf "${GREEN}  => Using a correct schema ID${ENDCOLOR}\n";
   else
-    printf "${RED}  => Schema $schema is not using a correct \$id\n"
+    printf "${ERROR}  => Schema $schema is not using a correct \$id\n"
     exit -1
   fi
   
@@ -40,13 +43,13 @@ for schema in $(find schemas -type f); do
   printf "=> Schema $name looks OK - checking examples now...\n"
 
   if [[ ! -d "examples/$name" ]]; then
-    printf "${RED}=> Schema $name lacks any examples! Please add at least one!\n"
+    printf "${ERROR}=> Schema $name lacks any examples! Please add at least one!\n"
     exit -1
   fi
 
   examples=$(find examples/$name -type f)
   if [[ "$examples" == "" ]]; then
-    printf "${RED}=> No examples found for schema $name! Please add at least one!\n"
+    printf "${ERROR}=> No examples found for schema $name! Please add at least one!\n"
     exit -1;
   fi
 
@@ -56,7 +59,7 @@ for schema in $(find schemas -type f); do
     printf "  => $eg looks good!\n"
   done
 
-  printf "${GREEN}Schema $name looks good!${ENDCOLOR}\n\n"
+  printf "${GREEN}::notice file=$schema::Schema $name looks good!${ENDCOLOR}\n\n"
 done
 
 printf "${GREEN}\n\nALL SCHEMAS LOOK GOOD, Nice work team!\n"
