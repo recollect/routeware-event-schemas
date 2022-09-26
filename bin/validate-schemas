@@ -24,10 +24,11 @@ for schema in $(find schemas -type f); do
   ajv validate -s $META_SCHEMA -d $schema --spec draft2020
 
   printf "=> Checking for 2020-12 schema\n"
+  CORRECT_SCHEMA=     "https://json-schema.org/draft/2020-12/schema"
   if grep '"$schema": "https://json-schema.org/draft/2020-12/schema"' $schema; then
     printf "${GREEN}  => Using correct schema${ENDCOLOR}\n"
   else
-    printf "${ERROR}  => Schema $schema is not using the correct schema\n"
+    printf "${ERROR}  => Schema $schema is not using the correct schema: Should be $CORRECT_SCHEMA\n"
     exit -1;
   fi
 
