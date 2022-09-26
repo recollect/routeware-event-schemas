@@ -1,0 +1,11 @@
+{
+  "source_locale": "en",
+  "target_locale": "fr",
+  "source_string": "Hello",
+  "human_needed": false,
+  "custom": {
+    "object": "page",
+    "page_id": 12345,
+    "field_id": "foo.56789"
+  }
+}
