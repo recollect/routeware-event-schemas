@@ -8,13 +8,12 @@
 		"source_locale",
 		"target_locale",
 		"source_string",
-		"human_needed",
-		"custom"
+		"human_needed"
 	],
 	"properties": {
 		"source_locale": {
 			"$id": "#root/source_locale", 
-			"title": "Source_locale", 
+			"title": "Source locale", 
 			"type": "string",
 			"default": "",
 			"examples": [
@@ -44,53 +43,17 @@
 		},
 		"human_needed": {
 			"$id": "#root/human_needed", 
-			"title": "Human_needed", 
+			"title": "Use human (Gengo) or Machine (Google)", 
 			"type": "boolean",
 			"examples": [
-				false
+				false, true
 			],
 			"default": true
 		},
 		"custom": {
 			"$id": "#root/custom", 
-			"title": "Custom", 
-			"type": "object",
-			"required": [
-				"object",
-				"page_id",
-				"field_id"
-			],
-			"properties": {
-				"object": {
-					"$id": "#root/custom/object", 
-					"title": "Object", 
-					"type": "string",
-					"default": "",
-					"examples": [
-						"page"
-					],
-					"pattern": "^.*$"
-				},
-				"page_id": {
-					"$id": "#root/custom/page_id", 
-					"title": "Page_id", 
-					"type": "integer",
-					"examples": [
-						12345
-					],
-					"default": 0
-				},
-				"field_id": {
-					"$id": "#root/custom/field_id", 
-					"title": "Field_id", 
-					"type": "string",
-					"default": "",
-					"examples": [
-						"foo.56789"
-					],
-					"pattern": "^.*$"
-				}
-			}
+			"title": "Custom attributes, passed through back with the result", 
+			"type": "object"
 		}
 
 	}
