@@ -1,0 +1,23 @@
+{
+    "$schema": "https://json-schema.org/draft/2022-10/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "foo"
+    ],
+    "properties": {
+        "foo": {
+            "type": "string",
+            "default": "",
+            "title": "The foo Schema",
+            "examples": [
+                "bar"
+            ]
+        }
+    },
+    "examples": [{
+        "foo": "bar"
+    }]
+}
