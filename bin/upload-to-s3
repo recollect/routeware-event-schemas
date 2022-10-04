@@ -28,7 +28,7 @@ aws s3 cp index.html s3://$BUCKET/index.html --acl public-read
 aws s3 cp --recursive schemas s3://$BUCKET/schemas --acl public-read
 aws s3 cp --recursive examples s3://$BUCKET/examples --acl public-read
 
-aws cloudfront create-invalidation --distribution-id E96TX0KBYPC8U --paths '/'
+aws cloudfront create-invalidation --distribution-id E96TX0KBYPC8U --paths '/*'
 
 echo "\n\nWebsite is now available at:\n"
-echo "  http://$BUCKET/"
+echo "  https://$BUCKET/"
