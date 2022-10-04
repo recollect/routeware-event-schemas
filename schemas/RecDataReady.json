@@ -5,7 +5,6 @@
     "default": {},
     "title": "RecDataReady Schema",
     "required": [
-        "input_file_url"
     ],
     "properties": {
         "input_file_url": {
@@ -14,6 +13,14 @@
             "title": "URL to the input file to be processed",
             "examples": [
                 "https://example.com/path/to/some/file"
+            ]
+        },
+        "connector_name": {
+            "type": "string",
+            "default": "default",
+            "title": "Name of the connector to be used, if necessary.",
+            "examples": [
+                "default"
             ]
         }
     },
