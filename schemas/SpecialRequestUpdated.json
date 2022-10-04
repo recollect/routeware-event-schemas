@@ -1,0 +1,41 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "com.routeware.eventbus.SpecialRequestUpdated",
+    "type": "object",
+    "default": {},
+    "title": "SpecialRequestUpdated Schema",
+    "required": [
+        "request_id", "resource_url", "updated_at"
+    ],
+    "properties": {
+        "request_id": {
+            "type": "string",
+            "default": "",
+            "title": "ID of the Special Request",
+            "examples": [
+                "ABCD-EFGH"
+            ]
+        },
+        "resource_url": {
+            "type": "string",
+            "default": "",
+            "title": "URL for the Special Request where more data can be found.",
+            "examples": [
+                "https://api.recollect.net/v2/special_requests/ABCD-EFGH"
+            ]
+        },
+        "updated_at": {
+            "type": "string",
+            "default": "",
+            "title": "Timestamp of the last update",
+            "examples": [
+                "2022-01-02 03:04:05 -0600"
+            ]
+        }
+    },
+    "examples": [{
+        "request_id": "ABCD-EFGH",
+        "resource_url": "https://api.recollect.net/v2/special_requests/ABCD-EFGH",
+        "updated_at": "2022-01-02 03:04:05 -0600"
+    }]
+}
