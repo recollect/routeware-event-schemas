@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "Source",
+    "MessageType",
+    "UUID",
+    "as_of",
+    "URL"
+  ],
+  "properties": {
+    "Source": {
+      "type": "string",
+      "default": "",
+      "title": "The Source Schema",
+      "examples": [
+        "com.routeware.encore.rcc-encore-int"
+      ]
+    },
+    "MessageType": {
+      "type": "string",
+      "default": "",
+      "title": "The MessageType Schema",
+      "examples": [
+        "Route"
+      ]
+    },
+    "UUID": {
+      "type": "string",
+      "default": "",
+      "title": "The UUID Schema",
+      "examples": [
+        "08f40e47-252d-43df-ba40-daf6c4722ec2"
+      ]
+    },
+    "as_of": {
+      "type": "string",
+      "default": "",
+      "title": "The as_of Schema",
+      "examples": [
+        "2022-10-04T14:50:39.1085065-04:00"
+      ]
+    },
+    "URL": {
+      "type": "string",
+      "default": "",
+      "title": "The URL Schema",
+      "examples": [
+        "https://corerccintegration.blob.core.windows.net/integrationjson/69307430-8ced-4d9c-9de3-467ac6542c70.json?sv=2021-08-06\u0026se=2022-10-06T21:09:08Z\u0026sr=b\u0026sp=r\u0026sig=uzkPHghYoLl+cVtCY8q8Q0pnfOtB62GOtfJgtRYPIDU="
+      ]
+    }
+  },
+  "examples": [
+    {
+      "Source": "com.routeware.encore.rcc-encore-int",
+      "MessageType": "Route",
+      "UUID": "08f40e47-252d-43df-ba40-daf6c4722ec2",
+      "as_of": "2022-10-04T14:50:39.1085065-04:00",
+      "URL": "https://corerccintegration.blob.core.windows.net/integrationjson/69307430-8ced-4d9c-9de3-467ac6542c70.json?sv=2021-08-06\u0026se=2022-10-06T21:09:08Z\u0026sr=b\u0026sp=r\u0026sig=uzkPHghYoLl+cVtCY8q8Q0pnfOtB62GOtfJgtRYPIDU="
+    }
+  ]
+}
