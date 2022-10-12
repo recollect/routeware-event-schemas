@@ -31,11 +31,18 @@
             "examples": [
                 "2022-01-02 03:04:05 -0600"
             ]
+        },
+        "config": {
+            "type": "object",
+            "title": "Configuration for this request type, passed through ReCollect"
         }
     },
     "examples": [{
         "request_id": "ABCD-EFGH",
         "resource_url": "https://api.recollect.net/v2/special_requests/ABCD-EFGH",
-        "updated_at": "2022-01-02 03:04:05 -0600"
+        "updated_at": "2022-01-02 03:04:05 -0600",
+        "config": {
+            "foo": "bar"
+        }
     }]
 }
