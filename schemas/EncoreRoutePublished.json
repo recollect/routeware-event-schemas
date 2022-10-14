@@ -9,7 +9,7 @@
     ],
     "properties": {
         "route_id": {
-            "type": "int",
+            "type": "integer",
             "default": 0,
             "title": "ID of the route",
             "examples": [
