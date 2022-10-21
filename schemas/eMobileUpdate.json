@@ -96,7 +96,7 @@
                         ]
                     },
                     "AUID": {
-                        "title": "Android Device UUID",
+                        "title": "Android Device Unique ID",
                         "type": "string",
                         "default": "",
                         "examples": [
@@ -136,7 +136,7 @@
                         ]
                     },
                     "Device_Event_ID": {
-                        "title": "Event ID for this device",
+                        "title": "Event ID for this device. Primary key while events are stored on the device. Can be used to sort events.",
                         "type": "string",
                         "default": "",
                         "examples": [
@@ -144,7 +144,7 @@
                         ]
                     },
                     "Event_Datetime": {
-                        "title": "Timestamp of this event",
+                        "title": "Timestamp of this event. ISO 8601",
                         "type": "string",
                         "default": "",
                         "examples": [
@@ -216,15 +216,15 @@
                         ]
                     },
                     "Stat_ID": {
-                        "title": "Stat ID",
+                        "title": "Status ID",
                         "type": "string",
                         "default": "",
                         "examples": [
-                            "0"
+                            "90104"
                         ]
                     },
                     "TCDE_ID": {
-                        "title": "TCDE ID",
+                        "title": "Transaction Code ID",
                         "type": "string",
                         "default": "",
                         "examples": [
@@ -232,7 +232,7 @@
                         ]
                     },
                     "Trans_DT": {
-                        "title": "Trans ID",
+                        "title": "Transaction Datetime. Epoch time in milliseconds.",
                         "type": "integer",
                         "default": 0,
                         "examples": [
@@ -240,7 +240,7 @@
                         ]
                     },
                     "VDR_ID": {
-                        "title": "VDR ID",
+                        "title": "Vendor ID - applicable for material and fuel timers",
                         "type": "string",
                         "default": "",
                         "examples": [
