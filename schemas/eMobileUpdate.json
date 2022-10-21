@@ -10,12 +10,11 @@
         "vehicleId",
         "clientId",
         "clientVehicleId",
-        "processed",
         "events"
     ],
     "properties": {
         "id": {
-            "title": "The id Schema",
+            "title": "ID of this message - should be a UUID",
             "type": "string",
             "default": "",
             "examples": [
@@ -23,7 +22,7 @@
             ]
         },
         "deviceId": {
-            "title": "The deviceId Schema",
+            "title": "ID of the eMobile Device",
             "type": "integer",
             "default": 0,
             "examples": [
@@ -31,7 +30,7 @@
             ]
         },
         "vehicleId": {
-            "title": "The vehicleId Schema",
+            "title": "ID of the eMobile Vehicle (globally unique)",
             "type": "integer",
             "default": 0,
             "examples": [
@@ -39,7 +38,7 @@
             ]
         },
         "clientId": {
-            "title": "The clientId Schema",
+            "title": "Client/Tenant (Customer) ID",
             "type": "integer",
             "default": 0,
             "examples": [
@@ -47,31 +46,22 @@
             ]
         },
         "clientVehicleId": {
-            "title": "The clientVehicleId Schema",
+            "title": "Client/Tenant's Vehicle ID (customer-unique)",
             "type": "integer",
             "default": 0,
             "examples": [
                 0
             ]
         },
-        "processed": {
-            "title": "The processed Schema",
-            "type": "boolean",
-            "default": false,
-            "examples": [
-                false
-            ]
-        },
         "events": {
-            "title": "The events Schema",
+            "title": "Array of Events from eMobile",
             "type": "array",
             "default": [],
             "items": {
-                "title": "A Schema",
+                "title": "eMobile Event Schema",
                 "type": "object",
                 "default": {},
                 "required": [
-                    "$id",
                     "accuracy",
                     "AUID",
                     "Bearing",
@@ -97,16 +87,8 @@
                     "uuid"
                 ],
                 "properties": {
-                    "$id": {
-                        "title": "The $id Schema",
-                        "type": "string",
-                        "default": "",
-                        "examples": [
-                            "2"
-                        ]
-                    },
                     "accuracy": {
-                        "title": "The accuracy Schema",
+                        "title": "Accuracy of GPS measurements, if relevant",
                         "type": "string",
                         "default": "",
                         "examples": [
@@ -114,7 +96,7 @@
                         ]
                     },
                     "AUID": {
-                        "title": "The AUID Schema",
+                        "title": "Android Device UUID",
                         "type": "string",
                         "default": "",
                         "examples": [
@@ -122,7 +104,7 @@
                         ]
                     },
                     "Bearing": {
-                        "title": "The Bearing Schema",
+                        "title": "GPS Bearing",
                         "type": "string",
                         "default": "",
                         "examples": [
@@ -130,7 +112,7 @@
                         ]
                     },
                     "Client_ID": {
-                        "title": "The Client_ID Schema",
+                        "title": "Client/Tenant ID",
                         "type": ["string", "null"],
                         "default": "",
                         "examples": [
@@ -138,7 +120,7 @@
                         ]
                     },
                     "Data_Alpha": {
-                        "title": "The Data_Alpha Schema",
+                        "title": "String/text Data for this event",
                         "type": "string",
                         "default": "",
                         "examples": [
@@ -146,7 +128,7 @@
                         ]
                     },
                     "Data_Num": {
-                        "title": "The Data_Num Schema",
+                        "title": "Numeric data for this event",
                         "type": "string",
                         "default": "",
                         "examples": [
@@ -154,7 +136,7 @@
                         ]
                     },
                     "Device_Event_ID": {
-                        "title": "The Device_Event_ID Schema",
+                        "title": "Event ID for this device",
                         "type": "string",
                         "default": "",
                         "examples": [
@@ -162,7 +144,7 @@
                         ]
                     },
                     "Event_Datetime": {
-                        "title": "The Event_Datetime Schema",
+                        "title": "Timestamp of this event",
                         "type": "string",
                         "default": "",
                         "examples": [
@@ -170,7 +152,7 @@
                         ]
                     },
                     "Event_Type": {
-                        "title": "The Event_Type Schema",
+                        "title": "Type of the event",
                         "type": "string",
                         "default": "",
                         "examples": [
@@ -178,7 +160,7 @@
                         ]
                     },
                     "imageEvent": {
-                        "title": "The imageEvent Schema",
+                        "title": "imageEvent ID",
                         "type": "string",
                         "default": "",
                         "examples": [
@@ -186,7 +168,7 @@
                         ]
                     },
                     "imageURI": {
-                        "title": "The imageURI Schema",
+                        "title": "URI for related image",
                         "type": ["string", "null"],
                         "default": "",
                         "examples": [
@@ -194,7 +176,7 @@
                         ]
                     },
                     "Item_ID": {
-                        "title": "The Item_ID Schema",
+                        "title": "Item ID for this event",
                         "type": "string",
                         "default": "",
                         "examples": [
@@ -202,7 +184,7 @@
                         ]
                     },
                     "Lat": {
-                        "title": "The Lat Schema",
+                        "title": "GPS Latitude",
                         "type": "string",
                         "default": "",
                         "examples": [
@@ -210,7 +192,7 @@
                         ]
                     },
                     "Lon": {
-                        "title": "The Lon Schema",
+                        "title": "GPS Longitude",
                         "type": "string",
                         "default": "",
                         "examples": [
@@ -218,7 +200,7 @@
                         ]
                     },
                     "RemoteLogEntry": {
-                        "title": "The RemoteLogEntry Schema",
+                        "title": "RemoteLogEntry field",
                         "type": ["string", "null"],
                         "default": "",
                         "examples": [
@@ -226,7 +208,7 @@
                         ]
                     },
                     "Speed": {
-                        "title": "The Speed Schema",
+                        "title": "Vehicle speed for GPS events",
                         "type": "string",
                         "default": "",
                         "examples": [
@@ -234,7 +216,7 @@
                         ]
                     },
                     "Stat_ID": {
-                        "title": "The Stat_ID Schema",
+                        "title": "Stat ID",
                         "type": "string",
                         "default": "",
                         "examples": [
@@ -242,7 +224,7 @@
                         ]
                     },
                     "TCDE_ID": {
-                        "title": "The TCDE_ID Schema",
+                        "title": "TCDE ID",
                         "type": "string",
                         "default": "",
                         "examples": [
@@ -250,7 +232,7 @@
                         ]
                     },
                     "Trans_DT": {
-                        "title": "The Trans_DT Schema",
+                        "title": "Trans ID",
                         "type": "integer",
                         "default": 0,
                         "examples": [
@@ -258,7 +240,7 @@
                         ]
                     },
                     "VDR_ID": {
-                        "title": "The VDR_ID Schema",
+                        "title": "VDR ID",
                         "type": "string",
                         "default": "",
                         "examples": [
@@ -266,7 +248,7 @@
                         ]
                     },
                     "Veh_ID": {
-                        "title": "The Veh_ID Schema",
+                        "title": "Vehicle ID",
                         "type": "string",
                         "default": "",
                         "examples": [
@@ -274,7 +256,7 @@
                         ]
                     },
                     "Worker_ID": {
-                        "title": "The Worker_ID Schema",
+                        "title": "Worker ID",
                         "type": "string",
                         "default": "",
                         "examples": [
@@ -282,7 +264,7 @@
                         ]
                     },
                     "uuid": {
-                        "title": "The uuid Schema",
+                        "title": "event UUID",
                         "type": ["string", "null"],
                         "default": null,
                         "examples": [
@@ -316,35 +298,7 @@
                     "Worker_ID": "4407",
                     "uuid": null
                 }]
-            },
-            "examples": [
-                [{
-                    "$id": "2",
-                    "accuracy": "0.8",
-                    "AUID": "e2c37a9aa3f82e39",
-                    "Bearing": "246.97",
-                    "Client_ID": "0",
-                    "Data_Alpha": "e8c3b7c3-085e-43b6-8b36-d5c415c80ea4",
-                    "Data_Num": "0",
-                    "Device_Event_ID": "58893",
-                    "Event_Datetime": "2022-10-12T14:42:56.556-05:00",
-                    "Event_Type": "SYS_IDLE_RUNNING",
-                    "imageEvent": "0",
-                    "imageURI": "",
-                    "Item_ID": "0",
-                    "Lat": "41.395093333333335",
-                    "Lon": "-96.07032833333332",
-                    "RemoteLogEntry": "",
-                    "Speed": "0.0",
-                    "Stat_ID": "0",
-                    "TCDE_ID": "0",
-                    "Trans_DT": 1665603776000,
-                    "VDR_ID": "0",
-                    "Veh_ID": "1226",
-                    "Worker_ID": "4407",
-                    "uuid": null
-                }]
-            ]
+            }
         }
     },
     "examples": [{
