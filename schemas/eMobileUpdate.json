@@ -1,0 +1,385 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "com.routeware.eventbus.eMobileUpdate",
+    "title": "eMobile Update Event Schema",
+    "type": "object",
+    "default": {},
+    "required": [
+        "id",
+        "deviceId",
+        "vehicleId",
+        "clientId",
+        "clientVehicleId",
+        "processed",
+        "events"
+    ],
+    "properties": {
+        "id": {
+            "title": "The id Schema",
+            "type": "string",
+            "default": "",
+            "examples": [
+                "146db3e7-9bb8-476b-8ff6-39975a85c32f"
+            ]
+        },
+        "deviceId": {
+            "title": "The deviceId Schema",
+            "type": "integer",
+            "default": 0,
+            "examples": [
+                11727
+            ]
+        },
+        "vehicleId": {
+            "title": "The vehicleId Schema",
+            "type": "integer",
+            "default": 0,
+            "examples": [
+                32337
+            ]
+        },
+        "clientId": {
+            "title": "The clientId Schema",
+            "type": "integer",
+            "default": 0,
+            "examples": [
+                181
+            ]
+        },
+        "clientVehicleId": {
+            "title": "The clientVehicleId Schema",
+            "type": "integer",
+            "default": 0,
+            "examples": [
+                0
+            ]
+        },
+        "processed": {
+            "title": "The processed Schema",
+            "type": "boolean",
+            "default": false,
+            "examples": [
+                false
+            ]
+        },
+        "events": {
+            "title": "The events Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+                "title": "A Schema",
+                "type": "object",
+                "default": {},
+                "required": [
+                    "$id",
+                    "accuracy",
+                    "AUID",
+                    "Bearing",
+                    "Client_ID",
+                    "Data_Alpha",
+                    "Data_Num",
+                    "Device_Event_ID",
+                    "Event_Datetime",
+                    "Event_Type",
+                    "imageEvent",
+                    "imageURI",
+                    "Item_ID",
+                    "Lat",
+                    "Lon",
+                    "RemoteLogEntry",
+                    "Speed",
+                    "Stat_ID",
+                    "TCDE_ID",
+                    "Trans_DT",
+                    "VDR_ID",
+                    "Veh_ID",
+                    "Worker_ID",
+                    "uuid"
+                ],
+                "properties": {
+                    "$id": {
+                        "title": "The $id Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "2"
+                        ]
+                    },
+                    "accuracy": {
+                        "title": "The accuracy Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "0.8"
+                        ]
+                    },
+                    "AUID": {
+                        "title": "The AUID Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "e2c37a9aa3f82e39"
+                        ]
+                    },
+                    "Bearing": {
+                        "title": "The Bearing Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "246.97"
+                        ]
+                    },
+                    "Client_ID": {
+                        "title": "The Client_ID Schema",
+                        "type": ["string", "null"],
+                        "default": "",
+                        "examples": [
+                            "0"
+                        ]
+                    },
+                    "Data_Alpha": {
+                        "title": "The Data_Alpha Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "e8c3b7c3-085e-43b6-8b36-d5c415c80ea4"
+                        ]
+                    },
+                    "Data_Num": {
+                        "title": "The Data_Num Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "0"
+                        ]
+                    },
+                    "Device_Event_ID": {
+                        "title": "The Device_Event_ID Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "58893"
+                        ]
+                    },
+                    "Event_Datetime": {
+                        "title": "The Event_Datetime Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "2022-10-12T14:42:56.556-05:00"
+                        ]
+                    },
+                    "Event_Type": {
+                        "title": "The Event_Type Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "SYS_IDLE_RUNNING"
+                        ]
+                    },
+                    "imageEvent": {
+                        "title": "The imageEvent Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "0"
+                        ]
+                    },
+                    "imageURI": {
+                        "title": "The imageURI Schema",
+                        "type": ["string", "null"],
+                        "default": "",
+                        "examples": [
+                            ""
+                        ]
+                    },
+                    "Item_ID": {
+                        "title": "The Item_ID Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "0"
+                        ]
+                    },
+                    "Lat": {
+                        "title": "The Lat Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "41.395093333333335"
+                        ]
+                    },
+                    "Lon": {
+                        "title": "The Lon Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "-96.07032833333332"
+                        ]
+                    },
+                    "RemoteLogEntry": {
+                        "title": "The RemoteLogEntry Schema",
+                        "type": ["string", "null"],
+                        "default": "",
+                        "examples": [
+                            ""
+                        ]
+                    },
+                    "Speed": {
+                        "title": "The Speed Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "0.0"
+                        ]
+                    },
+                    "Stat_ID": {
+                        "title": "The Stat_ID Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "0"
+                        ]
+                    },
+                    "TCDE_ID": {
+                        "title": "The TCDE_ID Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "0"
+                        ]
+                    },
+                    "Trans_DT": {
+                        "title": "The Trans_DT Schema",
+                        "type": "integer",
+                        "default": 0,
+                        "examples": [
+                            1665603776000
+                        ]
+                    },
+                    "VDR_ID": {
+                        "title": "The VDR_ID Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "0"
+                        ]
+                    },
+                    "Veh_ID": {
+                        "title": "The Veh_ID Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "1226"
+                        ]
+                    },
+                    "Worker_ID": {
+                        "title": "The Worker_ID Schema",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "4407"
+                        ]
+                    },
+                    "uuid": {
+                        "title": "The uuid Schema",
+                        "type": ["string", "null"],
+                        "default": null,
+                        "examples": [
+                            null
+                        ]
+                    }
+                },
+                "examples": [{
+                    "$id": "2",
+                    "accuracy": "0.8",
+                    "AUID": "e2c37a9aa3f82e39",
+                    "Bearing": "246.97",
+                    "Client_ID": "0",
+                    "Data_Alpha": "e8c3b7c3-085e-43b6-8b36-d5c415c80ea4",
+                    "Data_Num": "0",
+                    "Device_Event_ID": "58893",
+                    "Event_Datetime": "2022-10-12T14:42:56.556-05:00",
+                    "Event_Type": "SYS_IDLE_RUNNING",
+                    "imageEvent": "0",
+                    "imageURI": "",
+                    "Item_ID": "0",
+                    "Lat": "41.395093333333335",
+                    "Lon": "-96.07032833333332",
+                    "RemoteLogEntry": "",
+                    "Speed": "0.0",
+                    "Stat_ID": "0",
+                    "TCDE_ID": "0",
+                    "Trans_DT": 1665603776000,
+                    "VDR_ID": "0",
+                    "Veh_ID": "1226",
+                    "Worker_ID": "4407",
+                    "uuid": null
+                }]
+            },
+            "examples": [
+                [{
+                    "$id": "2",
+                    "accuracy": "0.8",
+                    "AUID": "e2c37a9aa3f82e39",
+                    "Bearing": "246.97",
+                    "Client_ID": "0",
+                    "Data_Alpha": "e8c3b7c3-085e-43b6-8b36-d5c415c80ea4",
+                    "Data_Num": "0",
+                    "Device_Event_ID": "58893",
+                    "Event_Datetime": "2022-10-12T14:42:56.556-05:00",
+                    "Event_Type": "SYS_IDLE_RUNNING",
+                    "imageEvent": "0",
+                    "imageURI": "",
+                    "Item_ID": "0",
+                    "Lat": "41.395093333333335",
+                    "Lon": "-96.07032833333332",
+                    "RemoteLogEntry": "",
+                    "Speed": "0.0",
+                    "Stat_ID": "0",
+                    "TCDE_ID": "0",
+                    "Trans_DT": 1665603776000,
+                    "VDR_ID": "0",
+                    "Veh_ID": "1226",
+                    "Worker_ID": "4407",
+                    "uuid": null
+                }]
+            ]
+        }
+    },
+    "examples": [{
+        "$id": "1",
+        "id": "146db3e7-9bb8-476b-8ff6-39975a85c32f",
+        "deviceId": 11727,
+        "vehicleId": 32337,
+        "clientId": 181,
+        "clientVehicleId": 0,
+        "processed": false,
+        "events": [{
+            "$id": "2",
+            "accuracy": "0.8",
+            "AUID": "e2c37a9aa3f82e39",
+            "Bearing": "246.97",
+            "Client_ID": "0",
+            "Data_Alpha": "e8c3b7c3-085e-43b6-8b36-d5c415c80ea4",
+            "Data_Num": "0",
+            "Device_Event_ID": "58893",
+            "Event_Datetime": "2022-10-12T14:42:56.556-05:00",
+            "Event_Type": "SYS_IDLE_RUNNING",
+            "imageEvent": "0",
+            "imageURI": "",
+            "Item_ID": "0",
+            "Lat": "41.395093333333335",
+            "Lon": "-96.07032833333332",
+            "RemoteLogEntry": "",
+            "Speed": "0.0",
+            "Stat_ID": "0",
+            "TCDE_ID": "0",
+            "Trans_DT": 1665603776000,
+            "VDR_ID": "0",
+            "Veh_ID": "1226",
+            "Worker_ID": "4407",
+            "uuid": null
+        }]
+    }]
+};
