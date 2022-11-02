@@ -1,0 +1,339 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "com.routeware.eventbus.eMobileUpdate",
+    "title": "eMobile Update Event Schema",
+    "type": "object",
+    "default": {},
+    "required": [
+        "id",
+        "deviceId",
+        "vehicleId",
+        "clientId",
+        "clientVehicleId",
+        "events"
+    ],
+    "properties": {
+        "id": {
+            "title": "ID of this message - should be a UUID",
+            "type": "string",
+            "default": "",
+            "examples": [
+                "146db3e7-9bb8-476b-8ff6-39975a85c32f"
+            ]
+        },
+        "deviceId": {
+            "title": "ID of the eMobile Device",
+            "type": "integer",
+            "default": 0,
+            "examples": [
+                11727
+            ]
+        },
+        "vehicleId": {
+            "title": "ID of the eMobile Vehicle (globally unique)",
+            "type": "integer",
+            "default": 0,
+            "examples": [
+                32337
+            ]
+        },
+        "clientId": {
+            "title": "Client/Tenant (Customer) ID",
+            "type": "integer",
+            "default": 0,
+            "examples": [
+                181
+            ]
+        },
+        "clientVehicleId": {
+            "title": "Client/Tenant's Vehicle ID (customer-unique)",
+            "type": "integer",
+            "default": 0,
+            "examples": [
+                0
+            ]
+        },
+        "events": {
+            "title": "Array of Events from eMobile",
+            "type": "array",
+            "default": [],
+            "items": {
+                "title": "eMobile Event Schema",
+                "type": "object",
+                "default": {},
+                "required": [
+                    "accuracy",
+                    "AUID",
+                    "Bearing",
+                    "Client_ID",
+                    "Data_Alpha",
+                    "Data_Num",
+                    "Device_Event_ID",
+                    "Event_Datetime",
+                    "Event_Type",
+                    "imageEvent",
+                    "imageURI",
+                    "Item_ID",
+                    "Lat",
+                    "Lon",
+                    "RemoteLogEntry",
+                    "Speed",
+                    "Stat_ID",
+                    "TCDE_ID",
+                    "Trans_DT",
+                    "VDR_ID",
+                    "Veh_ID",
+                    "Worker_ID",
+                    "uuid"
+                ],
+                "properties": {
+                    "accuracy": {
+                        "title": "Accuracy of GPS measurements, if relevant",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "0.8"
+                        ]
+                    },
+                    "AUID": {
+                        "title": "Android Device Unique ID",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "e2c37a9aa3f82e39"
+                        ]
+                    },
+                    "Bearing": {
+                        "title": "GPS Bearing",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "246.97"
+                        ]
+                    },
+                    "Client_ID": {
+                        "title": "Client/Tenant ID",
+                        "type": ["string", "null"],
+                        "default": "",
+                        "examples": [
+                            "0"
+                        ]
+                    },
+                    "Data_Alpha": {
+                        "title": "String/text Data for this event",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "e8c3b7c3-085e-43b6-8b36-d5c415c80ea4"
+                        ]
+                    },
+                    "Data_Num": {
+                        "title": "Numeric data for this event",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "0"
+                        ]
+                    },
+                    "Device_Event_ID": {
+                        "title": "Event ID for this device. Primary key while events are stored on the device. Can be used to sort events.",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "58893"
+                        ]
+                    },
+                    "Event_Datetime": {
+                        "title": "Timestamp of this event. ISO 8601",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "2022-10-12T14:42:56.556-05:00"
+                        ]
+                    },
+                    "Event_Type": {
+                        "title": "Type of the event",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "SYS_IDLE_RUNNING"
+                        ]
+                    },
+                    "imageEvent": {
+                        "title": "imageEvent ID",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "0"
+                        ]
+                    },
+                    "imageURI": {
+                        "title": "URI for related image",
+                        "type": ["string", "null"],
+                        "default": "",
+                        "examples": [
+                            ""
+                        ]
+                    },
+                    "Item_ID": {
+                        "title": "Item ID for this event",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "0"
+                        ]
+                    },
+                    "Lat": {
+                        "title": "GPS Latitude",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "41.395093333333335"
+                        ]
+                    },
+                    "Lon": {
+                        "title": "GPS Longitude",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "-96.07032833333332"
+                        ]
+                    },
+                    "RemoteLogEntry": {
+                        "title": "RemoteLogEntry field",
+                        "type": ["string", "null"],
+                        "default": "",
+                        "examples": [
+                            ""
+                        ]
+                    },
+                    "Speed": {
+                        "title": "Vehicle speed for GPS events",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "0.0"
+                        ]
+                    },
+                    "Stat_ID": {
+                        "title": "Status ID",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "90104"
+                        ]
+                    },
+                    "TCDE_ID": {
+                        "title": "Transaction Code ID",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "0"
+                        ]
+                    },
+                    "Trans_DT": {
+                        "title": "Transaction Datetime. Epoch time in milliseconds.",
+                        "type": "integer",
+                        "default": 0,
+                        "examples": [
+                            1665603776000
+                        ]
+                    },
+                    "VDR_ID": {
+                        "title": "Vendor ID - applicable for material and fuel timers",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "0"
+                        ]
+                    },
+                    "Veh_ID": {
+                        "title": "Vehicle ID",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "1226"
+                        ]
+                    },
+                    "Worker_ID": {
+                        "title": "Worker ID",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "4407"
+                        ]
+                    },
+                    "uuid": {
+                        "title": "event UUID",
+                        "type": ["string", "null"],
+                        "default": null,
+                        "examples": [
+                            null
+                        ]
+                    }
+                },
+                "examples": [{
+                    "$id": "2",
+                    "accuracy": "0.8",
+                    "AUID": "e2c37a9aa3f82e39",
+                    "Bearing": "246.97",
+                    "Client_ID": "0",
+                    "Data_Alpha": "e8c3b7c3-085e-43b6-8b36-d5c415c80ea4",
+                    "Data_Num": "0",
+                    "Device_Event_ID": "58893",
+                    "Event_Datetime": "2022-10-12T14:42:56.556-05:00",
+                    "Event_Type": "SYS_IDLE_RUNNING",
+                    "imageEvent": "0",
+                    "imageURI": "",
+                    "Item_ID": "0",
+                    "Lat": "41.395093333333335",
+                    "Lon": "-96.07032833333332",
+                    "RemoteLogEntry": "",
+                    "Speed": "0.0",
+                    "Stat_ID": "0",
+                    "TCDE_ID": "0",
+                    "Trans_DT": 1665603776000,
+                    "VDR_ID": "0",
+                    "Veh_ID": "1226",
+                    "Worker_ID": "4407",
+                    "uuid": null
+                }]
+            }
+        }
+    },
+    "examples": [{
+        "$id": "1",
+        "id": "146db3e7-9bb8-476b-8ff6-39975a85c32f",
+        "deviceId": 11727,
+        "vehicleId": 32337,
+        "clientId": 181,
+        "clientVehicleId": 0,
+        "processed": false,
+        "events": [{
+            "$id": "2",
+            "accuracy": "0.8",
+            "AUID": "e2c37a9aa3f82e39",
+            "Bearing": "246.97",
+            "Client_ID": "0",
+            "Data_Alpha": "e8c3b7c3-085e-43b6-8b36-d5c415c80ea4",
+            "Data_Num": "0",
+            "Device_Event_ID": "58893",
+            "Event_Datetime": "2022-10-12T14:42:56.556-05:00",
+            "Event_Type": "SYS_IDLE_RUNNING",
+            "imageEvent": "0",
+            "imageURI": "",
+            "Item_ID": "0",
+            "Lat": "41.395093333333335",
+            "Lon": "-96.07032833333332",
+            "RemoteLogEntry": "",
+            "Speed": "0.0",
+            "Stat_ID": "0",
+            "TCDE_ID": "0",
+            "Trans_DT": 1665603776000,
+            "VDR_ID": "0",
+            "Veh_ID": "1226",
+            "Worker_ID": "4407",
+            "uuid": null
+        }]
+    }]
+}

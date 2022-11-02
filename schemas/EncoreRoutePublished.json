@@ -1,0 +1,41 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "com.routeware.eventbus.EncoreRoutePublished",
+    "type": "object",
+    "default": {},
+    "title": "EncoreRoutePublished Schema",
+    "required": [
+        "route_id", "resource_url", "updated_at"
+    ],
+    "properties": {
+        "route_id": {
+            "type": "integer",
+            "default": 0,
+            "title": "ID of the route",
+            "examples": [
+                1234
+            ]
+        },
+        "resource_url": {
+            "type": "string",
+            "default": "",
+            "title": "URL for the container/api where more data can be found.",
+            "examples": [
+                "https://core-bigdipper.azurewebsites.net/api/EnCORE/tpc/routes/1234"
+            ]
+        },
+        "updated_at": {
+            "type": "string",
+            "default": "",
+            "title": "Timestamp of the last update",
+            "examples": [
+                "2022-01-02 03:04:05 -0600"
+            ]
+        }
+    },
+    "examples": [{
+        "route_id": 1234,
+        "resource_url": "https://core-bigdipper.azurewebsites.net/api/EnCORE/tpc/routes/1234",
+        "updated_at": "2022-01-02 03:04:05 -0600"
+    }]
+}
