@@ -1,0 +1,89 @@
+{
+  "Source": "com.routeware.encore",
+  "Tenant": "00000000-0000-0000-0000-000000000000",
+  "MessageType": "ServiceOrder",
+  "UUID": "3e496f6a-ab06-49bd-91d1-75268ce30f01",
+  "AsOf": "2022-09-26T16:10:06.886407-04:00",
+  "Data": [
+    {
+      "RouteHeaderID": 37709,
+      "RouteID": 3278,
+      "ServiceOrderID": 500035,
+      "ServiceDate": "2022-07-05T00:00:00",
+      "SequenceNumber": 0,
+      "CustomerID": 5263700,
+      "TransCode": "96T",
+      "TransDesc": "96-GALLON-TRASH",
+      "Quantity": 1.0,
+      "ServiceInstructions": "SEA AIR VILLAS IS LOCATED AT THE NW CORNER OF S OCEAN BLVD IN THE CITY OF DELRAY BEACH",
+      "RouteName": "T-FL177-1",
+      "RouteStatus": "DONE-EMOBILE",
+      "RouteType": "COM-FL",
+      "DriverID": 232,
+      "DriverName": "SHammond",
+      "CompanyID": 3,
+      "VehicleID": 1318,
+      "VehicleNumber": "SH_Test",
+      "OrderAction": "NONE",
+      "Address": "1715 S OCEAN BLVD",
+      "City": "DELRAY BEACH",
+      "State": "FL",
+      "Zip": "33483",
+      "CustServicePhone": "984-698-5121",
+      "CustServiceContact": "",
+      "CustomerName": "SEA AIR VILLAS",
+      "CustomerName2": "",
+      "ServiceDirections": "SEA AIR VILLAS IS LOCATED AT THE NW CORNER OF S OCEAN BLVD IN THE CITY OF DELRAY BEACH",
+      "AccountStatus": "ACTIVE",
+      "CustomerTypeID": 1,
+      "CustomerTypeName": "COMM/OFL",
+      "CustPriceQuantity": 0.0,
+      "SizeValue": 0.0,
+      "ServiceFrequency": 0.0,
+      "ServiceFrequencyName": "TEST",
+      "ServiceNotes": "TEST",
+      "OrderPriority": "NORMAL",
+      "CustPricingSizeName": "TEST",
+      "TransCodeSizeID": 30,
+      "ServOrderSizeName": "GAL",
+      "MaterialTransCode": "TEST",
+      "CustomerLatitude": "26.4406501687808",
+      "CustomerLongitude": "-80.0622819226652",
+      "CompanyName": "SE HAULING",
+      "AssignedUnitID": 4107,
+      "UnassignedUnitID": 0,
+      "ServiceUnitID": 0,
+      "Details": [
+        {
+          "ServiceOrderDetailID": 36,
+          "TransCode": "96T",
+          "TransDesc": "96-GALLON-TRASH",
+          "Quantity": 1.0,
+          "UnitPrice": 100.0,
+          "UnitCost": 0.0
+        }
+      ],
+      "AssignedUnit": {
+        "UnitID": 4107,
+        "SerialID": "968675402001",
+        "RFID": "",
+        "CurrentLatitude": "0",
+        "CurrentLongitude": "0"
+      },
+      "UnassignedUnit": {
+        "UnitID": 4107,
+        "SerialID": "968675402001",
+        "RFID": "",
+        "CurrentLatitude": "0",
+        "CurrentLongitude": "0"
+      },
+      "ServiceUnit": {
+        "UnitID": 4107,
+        "SerialID": "968675402001",
+        "RFID": "",
+        "CurrentLatitude": "0",
+        "CurrentLongitude": "0"
+      }
+    }
+  ]
+}

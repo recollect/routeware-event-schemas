@@ -1,0 +1,93 @@
+{
+  "Source": "com.routeware.encore",
+  "Tenant": "00000000-0000-0000-0000-000000000000",
+  "MessageType": "Route",
+  "UUID": "69307430-8ced-4d9c-9de3-467ac6542c70",
+  "AsOf": "2022-10-06T17:04:07.9505334-04:00",
+  "Data": [
+    {
+      "RouteHeaderID": 289984,
+      "RouteDate": "2022-10-03",
+      "RouteDay": "MONDAY",
+      "RouteID": 3256,
+      "RouteName": "M-FL019-3",
+      "RouteStatus": "SCHEDULED",
+      "RouteType": "COM-FL",
+      "DriverID": 165,
+      "DriverName": "Park",
+      "CompanyID": 3,
+      "Helper1Name": "UNASSIGNED",
+      "Helper2Name": "UNASSIGNED",
+      "VehicleID": 0,
+      "VehicleNumber": "UNASSIGNED",
+      "ScheduledYards": 939.0,
+      "ScheduledStops": 266.0,
+      "ScheduledLifts": 313.0,
+      "HelperRoute": false,
+      "CompanyName": "SOUTH FL HAULING",
+      "Details": [
+        {
+          "StopHeaderID": 988975,
+          "RouteStopID": 29223,
+          "RouteSequence": 0,
+          "CustomerID": 4674000,
+          "CustomerName": "DELMAR MOTEL APARTMENTS",
+          "Address": "325 ARTHUR ST",
+          "City": "HOLLYWOOD",
+          "State": "FL",
+          "Zip": "33019",
+          "Quantity": 1.0,
+          "ScheduleSize": 3.0,
+          "UnitSizeValue": 3.0,
+          "UnitSizeName": "YD",
+          "CustServicePhone": "502-488-2402",
+          "CustServiceContact": "",
+          "ServiceNotes": "",
+          "RouteNotes": "Watch for LOW Overhead wires!",
+          "MaterialTransCode": "1234",
+          "TransCode": "FL-3-MSW",
+          "TransDesc": "FL 3YD WASTE SERVICE",
+          "AccountStatus": "ACTIVE-CREDIT",
+          "ServiceDate": "2022-10-03",
+          "ServiceDirections": "DELMAR MOTEL APARTMENTS IS LOCATED AT THE NW CORNER OF ARTHUR ST IN THE CITY OF HOLLYWOOD",
+          "PauseRoute": false,
+          "ActivePricingID": 3232,
+          "BusinessEmail": "NATRO2000@YAHOO.COM",
+          "BusinessPhone": "502-488-2402",
+          "BusinessFax": "808-395-0186",
+          "CustomerLatitude": "26.0229265469847",
+          "CustomerLongitude": "-80.1155861964525",
+          "CompanyName": "SOUTH FL HAULING",
+          "PriceArea": "BROWARD-AREA",
+          "Units": [
+            {
+              "UnitID": 4107,
+              "SerialID": "968675402001",
+              "RFID": "",
+              "CurrentLatitude": "0",
+              "CurrentLongitude": "0"
+            }
+          ],
+          "Lifts": [
+            {
+              "StopUnitDetailID": 1479555,
+              "TransCode": "FL-3-MSW",
+              "TransDesc": "FL 3YD WASTE SERVICE",
+              "ScheduledUnits": 1.0,
+              "ScheduledSize": 3.0,
+              "ScheduledService": "FL 3YD WASTE SERVICE | 3 @ 1.00x/wk",
+              "IsHelperStop": false,
+              "Unit": {
+                "UnitID": 4107,
+                "SerialID": "968675402001",
+                "RFID": "",
+                "CurrentLatitude": "0",
+                "CurrentLongitude": "0"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
