@@ -1,0 +1,1202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Detailed Encore Route Created Schema",
+  "required": [
+    "Source",
+    "Tenant",
+    "MessageType",
+    "UUID",
+    "AsOf",
+    "Data"
+  ],
+  "properties": {
+    "Source": {
+      "type": "string",
+      "default": "",
+      "title": "The Source Schema",
+      "examples": [
+        "com.routeware.encore"
+      ]
+    },
+    "Tenant": {
+      "type": "string",
+      "default": "",
+      "title": "The Tenant Schema",
+      "examples": [
+        "00000000-0000-0000-0000-000000000000"
+      ]
+    },
+    "MessageType": {
+      "type": "string",
+      "default": "",
+      "title": "The MessageType Schema",
+      "examples": [
+        "Route"
+      ]
+    },
+    "UUID": {
+      "type": "string",
+      "default": "",
+      "title": "The UUID Schema",
+      "examples": [
+        "69307430-8ced-4d9c-9de3-467ac6542c70"
+      ]
+    },
+    "AsOf": {
+      "type": "string",
+      "default": "",
+      "title": "The AsOf Schema",
+      "examples": [
+        "2022-10-06T17:04:07.9505334-04:00"
+      ]
+    },
+    "Data": {
+      "type": "array",
+      "default": [],
+      "title": "The Data Schema",
+      "items": {
+        "type": "object",
+        "default": {},
+        "title": "A Schema",
+        "required": [
+          "RouteHeaderID",
+          "RouteDate",
+          "RouteDay",
+          "RouteID",
+          "RouteName",
+          "RouteStatus",
+          "RouteType",
+          "DriverID",
+          "DriverName",
+          "CompanyID",
+          "Helper1Name",
+          "Helper2Name",
+          "VehicleID",
+          "VehicleNumber",
+          "ScheduledYards",
+          "ScheduledStops",
+          "ScheduledLifts",
+          "HelperRoute",
+          "CompanyName",
+          "Details"
+        ],
+        "properties": {
+          "RouteHeaderID": {
+            "type": "integer",
+            "default": 0,
+            "title": "The RouteHeaderID Schema",
+            "examples": [
+              289984
+            ]
+          },
+          "RouteDate": {
+            "type": "string",
+            "default": "",
+            "title": "The RouteDate Schema",
+            "examples": [
+              "2022-10-03"
+            ]
+          },
+          "RouteDay": {
+            "type": "string",
+            "default": "",
+            "title": "The RouteDay Schema",
+            "examples": [
+              "MONDAY"
+            ]
+          },
+          "RouteID": {
+            "type": "integer",
+            "default": 0,
+            "title": "The RouteID Schema",
+            "examples": [
+              3256
+            ]
+          },
+          "RouteName": {
+            "type": "string",
+            "default": "",
+            "title": "The RouteName Schema",
+            "examples": [
+              "M-FL019-3"
+            ]
+          },
+          "RouteStatus": {
+            "type": "string",
+            "default": "",
+            "title": "The RouteStatus Schema",
+            "examples": [
+              "SCHEDULED"
+            ]
+          },
+          "RouteType": {
+            "type": "string",
+            "default": "",
+            "title": "The RouteType Schema",
+            "examples": [
+              "COM-FL"
+            ]
+          },
+          "DriverID": {
+            "type": "integer",
+            "default": 0,
+            "title": "The DriverID Schema",
+            "examples": [
+              165
+            ]
+          },
+          "DriverName": {
+            "type": "string",
+            "default": "",
+            "title": "The DriverName Schema",
+            "examples": [
+              "Park"
+            ]
+          },
+          "CompanyID": {
+            "type": "integer",
+            "default": 0,
+            "title": "The CompanyID Schema",
+            "examples": [
+              3
+            ]
+          },
+          "Helper1Name": {
+            "type": "string",
+            "default": "",
+            "title": "The Helper1Name Schema",
+            "examples": [
+              "UNASSIGNED"
+            ]
+          },
+          "Helper2Name": {
+            "type": "string",
+            "default": "",
+            "title": "The Helper2Name Schema",
+            "examples": [
+              "UNASSIGNED"
+            ]
+          },
+          "VehicleID": {
+            "type": "integer",
+            "default": 0,
+            "title": "The VehicleID Schema",
+            "examples": [
+              0
+            ]
+          },
+          "VehicleNumber": {
+            "type": "string",
+            "default": "",
+            "title": "The VehicleNumber Schema",
+            "examples": [
+              "UNASSIGNED"
+            ]
+          },
+          "ScheduledYards": {
+            "type": "number",
+            "default": 0.0,
+            "title": "The ScheduledYards Schema",
+            "examples": [
+              939.0
+            ]
+          },
+          "ScheduledStops": {
+            "type": "number",
+            "default": 0.0,
+            "title": "The ScheduledStops Schema",
+            "examples": [
+              266.0
+            ]
+          },
+          "ScheduledLifts": {
+            "type": "number",
+            "default": 0.0,
+            "title": "The ScheduledLifts Schema",
+            "examples": [
+              313.0
+            ]
+          },
+          "HelperRoute": {
+            "type": "boolean",
+            "default": false,
+            "title": "The HelperRoute Schema",
+            "examples": [
+              false
+            ]
+          },
+          "CompanyName": {
+            "type": "string",
+            "default": "",
+            "title": "The CompanyName Schema",
+            "examples": [
+              "SOUTH FL HAULING"
+            ]
+          },
+          "Details": {
+            "type": "array",
+            "default": [],
+            "title": "The Details Schema",
+            "items": {
+              "type": "object",
+              "default": {},
+              "title": "A Schema",
+              "required": [
+                "StopHeaderID",
+                "RouteStopID",
+                "RouteSequence",
+                "CustomerID",
+                "CustomerName",
+                "Address",
+                "City",
+                "State",
+                "Zip",
+                "Quantity",
+                "ScheduleSize",
+                "UnitSizeValue",
+                "UnitSizeName",
+                "CustServicePhone",
+                "CustServiceContact",
+                "ServiceNotes",
+                "RouteNotes",
+                "MaterialTransCode",
+                "TransCode",
+                "TransDesc",
+                "AccountStatus",
+                "ServiceDate",
+                "ServiceDirections",
+                "PauseRoute",
+                "ActivePricingID",
+                "BusinessEmail",
+                "BusinessPhone",
+                "BusinessFax",
+                "CustomerLatitude",
+                "CustomerLongitude",
+                "CompanyName",
+                "PriceArea",
+                "Units",
+                "Lifts"
+              ],
+              "properties": {
+                "StopHeaderID": {
+                  "type": "integer",
+                  "default": 0,
+                  "title": "The StopHeaderID Schema",
+                  "examples": [
+                    988975
+                  ]
+                },
+                "RouteStopID": {
+                  "type": "integer",
+                  "default": 0,
+                  "title": "The RouteStopID Schema",
+                  "examples": [
+                    29223
+                  ]
+                },
+                "RouteSequence": {
+                  "type": "integer",
+                  "default": 0,
+                  "title": "The RouteSequence Schema",
+                  "examples": [
+                    0
+                  ]
+                },
+                "CustomerID": {
+                  "type": "integer",
+                  "default": 0,
+                  "title": "The CustomerID Schema",
+                  "examples": [
+                    4674000
+                  ]
+                },
+                "CustomerName": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The CustomerName Schema",
+                  "examples": [
+                    "DELMAR MOTEL APARTMENTS"
+                  ]
+                },
+                "Address": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The Address Schema",
+                  "examples": [
+                    "325 ARTHUR ST"
+                  ]
+                },
+                "City": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The City Schema",
+                  "examples": [
+                    "HOLLYWOOD"
+                  ]
+                },
+                "State": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The State Schema",
+                  "examples": [
+                    "FL"
+                  ]
+                },
+                "Zip": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The Zip Schema",
+                  "examples": [
+                    "33019"
+                  ]
+                },
+                "Quantity": {
+                  "type": "number",
+                  "default": 0.0,
+                  "title": "The Quantity Schema",
+                  "examples": [
+                    1.0
+                  ]
+                },
+                "ScheduleSize": {
+                  "type": "number",
+                  "default": 0.0,
+                  "title": "The ScheduleSize Schema",
+                  "examples": [
+                    3.0
+                  ]
+                },
+                "UnitSizeValue": {
+                  "type": "number",
+                  "default": 0.0,
+                  "title": "The UnitSizeValue Schema",
+                  "examples": [
+                    3.0
+                  ]
+                },
+                "UnitSizeName": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The UnitSizeName Schema",
+                  "examples": [
+                    "YD"
+                  ]
+                },
+                "CustServicePhone": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The CustServicePhone Schema",
+                  "examples": [
+                    "502-488-2402"
+                  ]
+                },
+                "CustServiceContact": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The CustServiceContact Schema",
+                  "examples": [
+                    ""
+                  ]
+                },
+                "ServiceNotes": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The ServiceNotes Schema",
+                  "examples": [
+                    ""
+                  ]
+                },
+                "RouteNotes": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The RouteNotes Schema",
+                  "examples": [
+                    "Watch for LOW Overhead wires!"
+                  ]
+                },
+                "MaterialTransCode": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The MaterialTransCode Schema",
+                  "examples": [
+                    "1234"
+                  ]
+                },
+                "TransCode": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The TransCode Schema",
+                  "examples": [
+                    "FL-3-MSW"
+                  ]
+                },
+                "TransDesc": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The TransDesc Schema",
+                  "examples": [
+                    "FL 3YD WASTE SERVICE"
+                  ]
+                },
+                "AccountStatus": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The AccountStatus Schema",
+                  "examples": [
+                    "ACTIVE-CREDIT"
+                  ]
+                },
+                "ServiceDate": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The ServiceDate Schema",
+                  "examples": [
+                    "2022-10-03"
+                  ]
+                },
+                "ServiceDirections": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The ServiceDirections Schema",
+                  "examples": [
+                    "DELMAR MOTEL APARTMENTS IS LOCATED AT THE NW CORNER OF ARTHUR ST IN THE CITY OF HOLLYWOOD"
+                  ]
+                },
+                "PauseRoute": {
+                  "type": "boolean",
+                  "default": false,
+                  "title": "The PauseRoute Schema",
+                  "examples": [
+                    false
+                  ]
+                },
+                "ActivePricingID": {
+                  "type": "integer",
+                  "default": 0,
+                  "title": "The ActivePricingID Schema",
+                  "examples": [
+                    3232
+                  ]
+                },
+                "BusinessEmail": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The BusinessEmail Schema",
+                  "examples": [
+                    "NATRO2000@YAHOO.COM"
+                  ]
+                },
+                "BusinessPhone": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The BusinessPhone Schema",
+                  "examples": [
+                    "502-488-2402"
+                  ]
+                },
+                "BusinessFax": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The BusinessFax Schema",
+                  "examples": [
+                    "808-395-0186"
+                  ]
+                },
+                "CustomerLatitude": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The CustomerLatitude Schema",
+                  "examples": [
+                    "26.0229265469847"
+                  ]
+                },
+                "CustomerLongitude": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The CustomerLongitude Schema",
+                  "examples": [
+                    "-80.1155861964525"
+                  ]
+                },
+                "CompanyName": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The CompanyName Schema",
+                  "examples": [
+                    "SOUTH FL HAULING"
+                  ]
+                },
+                "PriceArea": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The PriceArea Schema",
+                  "examples": [
+                    "BROWARD-AREA"
+                  ]
+                },
+                "Units": {
+                  "type": "array",
+                  "default": [],
+                  "title": "The Units Schema",
+                  "items": {
+                    "type": "object",
+                    "default": {},
+                    "title": "A Schema",
+                    "required": [
+                      "UnitID",
+                      "SerialID",
+                      "RFID",
+                      "CurrentLatitude",
+                      "CurrentLongitude"
+                    ],
+                    "properties": {
+                      "UnitID": {
+                        "type": "integer",
+                        "default": 0,
+                        "title": "The UnitID Schema",
+                        "examples": [
+                          4107
+                        ]
+                      },
+                      "SerialID": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The SerialID Schema",
+                        "examples": [
+                          "968675402001"
+                        ]
+                      },
+                      "RFID": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The RFID Schema",
+                        "examples": [
+                          ""
+                        ]
+                      },
+                      "CurrentLatitude": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The CurrentLatitude Schema",
+                        "examples": [
+                          "0"
+                        ]
+                      },
+                      "CurrentLongitude": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The CurrentLongitude Schema",
+                        "examples": [
+                          "0"
+                        ]
+                      }
+                    },
+                    "examples": [
+                      {
+                        "UnitID": 4107,
+                        "SerialID": "968675402001",
+                        "RFID": "",
+                        "CurrentLatitude": "0",
+                        "CurrentLongitude": "0"
+                      }
+                    ]
+                  },
+                  "examples": [
+                    [
+                      {
+                        "UnitID": 4107,
+                        "SerialID": "968675402001",
+                        "RFID": "",
+                        "CurrentLatitude": "0",
+                        "CurrentLongitude": "0"
+                      }
+                    ]
+                  ]
+                },
+                "Lifts": {
+                  "type": "array",
+                  "default": [],
+                  "title": "The Lifts Schema",
+                  "items": {
+                    "type": "object",
+                    "default": {},
+                    "title": "A Schema",
+                    "required": [
+                      "StopUnitDetailID",
+                      "TransCode",
+                      "TransDesc",
+                      "ScheduledUnits",
+                      "ScheduledSize",
+                      "ScheduledService",
+                      "IsHelperStop",
+                      "Unit"
+                    ],
+                    "properties": {
+                      "StopUnitDetailID": {
+                        "type": "integer",
+                        "default": 0,
+                        "title": "The StopUnitDetailID Schema",
+                        "examples": [
+                          1479555
+                        ]
+                      },
+                      "TransCode": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The TransCode Schema",
+                        "examples": [
+                          "FL-3-MSW"
+                        ]
+                      },
+                      "TransDesc": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The TransDesc Schema",
+                        "examples": [
+                          "FL 3YD WASTE SERVICE"
+                        ]
+                      },
+                      "ScheduledUnits": {
+                        "type": "number",
+                        "default": 0.0,
+                        "title": "The ScheduledUnits Schema",
+                        "examples": [
+                          1.0
+                        ]
+                      },
+                      "ScheduledSize": {
+                        "type": "number",
+                        "default": 0.0,
+                        "title": "The ScheduledSize Schema",
+                        "examples": [
+                          3.0
+                        ]
+                      },
+                      "ScheduledService": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The ScheduledService Schema",
+                        "examples": [
+                          "FL 3YD WASTE SERVICE | 3 @ 1.00x/wk"
+                        ]
+                      },
+                      "IsHelperStop": {
+                        "type": "boolean",
+                        "default": false,
+                        "title": "The IsHelperStop Schema",
+                        "examples": [
+                          false
+                        ]
+                      },
+                      "Unit": {
+                        "type": "object",
+                        "default": {},
+                        "title": "The Unit Schema",
+                        "required": [
+                          "UnitID",
+                          "SerialID",
+                          "RFID",
+                          "CurrentLatitude",
+                          "CurrentLongitude"
+                        ],
+                        "properties": {
+                          "UnitID": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The UnitID Schema",
+                            "examples": [
+                              4107
+                            ]
+                          },
+                          "SerialID": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The SerialID Schema",
+                            "examples": [
+                              "968675402001"
+                            ]
+                          },
+                          "RFID": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The RFID Schema",
+                            "examples": [
+                              ""
+                            ]
+                          },
+                          "CurrentLatitude": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The CurrentLatitude Schema",
+                            "examples": [
+                              "0"
+                            ]
+                          },
+                          "CurrentLongitude": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The CurrentLongitude Schema",
+                            "examples": [
+                              "0"
+                            ]
+                          }
+                        },
+                        "examples": [
+                          {
+                            "UnitID": 4107,
+                            "SerialID": "968675402001",
+                            "RFID": "",
+                            "CurrentLatitude": "0",
+                            "CurrentLongitude": "0"
+                          }
+                        ]
+                      }
+                    },
+                    "examples": [
+                      {
+                        "StopUnitDetailID": 1479555,
+                        "TransCode": "FL-3-MSW",
+                        "TransDesc": "FL 3YD WASTE SERVICE",
+                        "ScheduledUnits": 1.0,
+                        "ScheduledSize": 3.0,
+                        "ScheduledService": "FL 3YD WASTE SERVICE | 3 @ 1.00x/wk",
+                        "IsHelperStop": false,
+                        "Unit": {
+                          "UnitID": 4107,
+                          "SerialID": "968675402001",
+                          "RFID": "",
+                          "CurrentLatitude": "0",
+                          "CurrentLongitude": "0"
+                        }
+                      }
+                    ]
+                  },
+                  "examples": [
+                    [
+                      {
+                        "StopUnitDetailID": 1479555,
+                        "TransCode": "FL-3-MSW",
+                        "TransDesc": "FL 3YD WASTE SERVICE",
+                        "ScheduledUnits": 1.0,
+                        "ScheduledSize": 3.0,
+                        "ScheduledService": "FL 3YD WASTE SERVICE | 3 @ 1.00x/wk",
+                        "IsHelperStop": false,
+                        "Unit": {
+                          "UnitID": 4107,
+                          "SerialID": "968675402001",
+                          "RFID": "",
+                          "CurrentLatitude": "0",
+                          "CurrentLongitude": "0"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              },
+              "examples": [
+                {
+                  "StopHeaderID": 988975,
+                  "RouteStopID": 29223,
+                  "RouteSequence": 0,
+                  "CustomerID": 4674000,
+                  "CustomerName": "DELMAR MOTEL APARTMENTS",
+                  "Address": "325 ARTHUR ST",
+                  "City": "HOLLYWOOD",
+                  "State": "FL",
+                  "Zip": "33019",
+                  "Quantity": 1.0,
+                  "ScheduleSize": 3.0,
+                  "UnitSizeValue": 3.0,
+                  "UnitSizeName": "YD",
+                  "CustServicePhone": "502-488-2402",
+                  "CustServiceContact": "",
+                  "ServiceNotes": "",
+                  "RouteNotes": "Watch for LOW Overhead wires!",
+                  "MaterialTransCode": "1234",
+                  "TransCode": "FL-3-MSW",
+                  "TransDesc": "FL 3YD WASTE SERVICE",
+                  "AccountStatus": "ACTIVE-CREDIT",
+                  "ServiceDate": "2022-10-03",
+                  "ServiceDirections": "DELMAR MOTEL APARTMENTS IS LOCATED AT THE NW CORNER OF ARTHUR ST IN THE CITY OF HOLLYWOOD",
+                  "PauseRoute": false,
+                  "ActivePricingID": 3232,
+                  "BusinessEmail": "NATRO2000@YAHOO.COM",
+                  "BusinessPhone": "502-488-2402",
+                  "BusinessFax": "808-395-0186",
+                  "CustomerLatitude": "26.0229265469847",
+                  "CustomerLongitude": "-80.1155861964525",
+                  "CompanyName": "SOUTH FL HAULING",
+                  "PriceArea": "BROWARD-AREA",
+                  "Units": [
+                    {
+                      "UnitID": 4107,
+                      "SerialID": "968675402001",
+                      "RFID": "",
+                      "CurrentLatitude": "0",
+                      "CurrentLongitude": "0"
+                    }
+                  ],
+                  "Lifts": [
+                    {
+                      "StopUnitDetailID": 1479555,
+                      "TransCode": "FL-3-MSW",
+                      "TransDesc": "FL 3YD WASTE SERVICE",
+                      "ScheduledUnits": 1.0,
+                      "ScheduledSize": 3.0,
+                      "ScheduledService": "FL 3YD WASTE SERVICE | 3 @ 1.00x/wk",
+                      "IsHelperStop": false,
+                      "Unit": {
+                        "UnitID": 4107,
+                        "SerialID": "968675402001",
+                        "RFID": "",
+                        "CurrentLatitude": "0",
+                        "CurrentLongitude": "0"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "examples": [
+              [
+                {
+                  "StopHeaderID": 988975,
+                  "RouteStopID": 29223,
+                  "RouteSequence": 0,
+                  "CustomerID": 4674000,
+                  "CustomerName": "DELMAR MOTEL APARTMENTS",
+                  "Address": "325 ARTHUR ST",
+                  "City": "HOLLYWOOD",
+                  "State": "FL",
+                  "Zip": "33019",
+                  "Quantity": 1.0,
+                  "ScheduleSize": 3.0,
+                  "UnitSizeValue": 3.0,
+                  "UnitSizeName": "YD",
+                  "CustServicePhone": "502-488-2402",
+                  "CustServiceContact": "",
+                  "ServiceNotes": "",
+                  "RouteNotes": "Watch for LOW Overhead wires!",
+                  "MaterialTransCode": "1234",
+                  "TransCode": "FL-3-MSW",
+                  "TransDesc": "FL 3YD WASTE SERVICE",
+                  "AccountStatus": "ACTIVE-CREDIT",
+                  "ServiceDate": "2022-10-03",
+                  "ServiceDirections": "DELMAR MOTEL APARTMENTS IS LOCATED AT THE NW CORNER OF ARTHUR ST IN THE CITY OF HOLLYWOOD",
+                  "PauseRoute": false,
+                  "ActivePricingID": 3232,
+                  "BusinessEmail": "NATRO2000@YAHOO.COM",
+                  "BusinessPhone": "502-488-2402",
+                  "BusinessFax": "808-395-0186",
+                  "CustomerLatitude": "26.0229265469847",
+                  "CustomerLongitude": "-80.1155861964525",
+                  "CompanyName": "SOUTH FL HAULING",
+                  "PriceArea": "BROWARD-AREA",
+                  "Units": [
+                    {
+                      "UnitID": 4107,
+                      "SerialID": "968675402001",
+                      "RFID": "",
+                      "CurrentLatitude": "0",
+                      "CurrentLongitude": "0"
+                    }
+                  ],
+                  "Lifts": [
+                    {
+                      "StopUnitDetailID": 1479555,
+                      "TransCode": "FL-3-MSW",
+                      "TransDesc": "FL 3YD WASTE SERVICE",
+                      "ScheduledUnits": 1.0,
+                      "ScheduledSize": 3.0,
+                      "ScheduledService": "FL 3YD WASTE SERVICE | 3 @ 1.00x/wk",
+                      "IsHelperStop": false,
+                      "Unit": {
+                        "UnitID": 4107,
+                        "SerialID": "968675402001",
+                        "RFID": "",
+                        "CurrentLatitude": "0",
+                        "CurrentLongitude": "0"
+                      }
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "examples": [
+          {
+            "RouteHeaderID": 289984,
+            "RouteDate": "2022-10-03",
+            "RouteDay": "MONDAY",
+            "RouteID": 3256,
+            "RouteName": "M-FL019-3",
+            "RouteStatus": "SCHEDULED",
+            "RouteType": "COM-FL",
+            "DriverID": 165,
+            "DriverName": "Park",
+            "CompanyID": 3,
+            "Helper1Name": "UNASSIGNED",
+            "Helper2Name": "UNASSIGNED",
+            "VehicleID": 0,
+            "VehicleNumber": "UNASSIGNED",
+            "ScheduledYards": 939.0,
+            "ScheduledStops": 266.0,
+            "ScheduledLifts": 313.0,
+            "HelperRoute": false,
+            "CompanyName": "SOUTH FL HAULING",
+            "Details": [
+              {
+                "StopHeaderID": 988975,
+                "RouteStopID": 29223,
+                "RouteSequence": 0,
+                "CustomerID": 4674000,
+                "CustomerName": "DELMAR MOTEL APARTMENTS",
+                "Address": "325 ARTHUR ST",
+                "City": "HOLLYWOOD",
+                "State": "FL",
+                "Zip": "33019",
+                "Quantity": 1.0,
+                "ScheduleSize": 3.0,
+                "UnitSizeValue": 3.0,
+                "UnitSizeName": "YD",
+                "CustServicePhone": "502-488-2402",
+                "CustServiceContact": "",
+                "ServiceNotes": "",
+                "RouteNotes": "Watch for LOW Overhead wires!",
+                "MaterialTransCode": "1234",
+                "TransCode": "FL-3-MSW",
+                "TransDesc": "FL 3YD WASTE SERVICE",
+                "AccountStatus": "ACTIVE-CREDIT",
+                "ServiceDate": "2022-10-03",
+                "ServiceDirections": "DELMAR MOTEL APARTMENTS IS LOCATED AT THE NW CORNER OF ARTHUR ST IN THE CITY OF HOLLYWOOD",
+                "PauseRoute": false,
+                "ActivePricingID": 3232,
+                "BusinessEmail": "NATRO2000@YAHOO.COM",
+                "BusinessPhone": "502-488-2402",
+                "BusinessFax": "808-395-0186",
+                "CustomerLatitude": "26.0229265469847",
+                "CustomerLongitude": "-80.1155861964525",
+                "CompanyName": "SOUTH FL HAULING",
+                "PriceArea": "BROWARD-AREA",
+                "Units": [
+                  {
+                    "UnitID": 4107,
+                    "SerialID": "968675402001",
+                    "RFID": "",
+                    "CurrentLatitude": "0",
+                    "CurrentLongitude": "0"
+                  }
+                ],
+                "Lifts": [
+                  {
+                    "StopUnitDetailID": 1479555,
+                    "TransCode": "FL-3-MSW",
+                    "TransDesc": "FL 3YD WASTE SERVICE",
+                    "ScheduledUnits": 1.0,
+                    "ScheduledSize": 3.0,
+                    "ScheduledService": "FL 3YD WASTE SERVICE | 3 @ 1.00x/wk",
+                    "IsHelperStop": false,
+                    "Unit": {
+                      "UnitID": 4107,
+                      "SerialID": "968675402001",
+                      "RFID": "",
+                      "CurrentLatitude": "0",
+                      "CurrentLongitude": "0"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "RouteHeaderID": 289984,
+            "RouteDate": "2022-10-03",
+            "RouteDay": "MONDAY",
+            "RouteID": 3256,
+            "RouteName": "M-FL019-3",
+            "RouteStatus": "SCHEDULED",
+            "RouteType": "COM-FL",
+            "DriverID": 165,
+            "DriverName": "Park",
+            "CompanyID": 3,
+            "Helper1Name": "UNASSIGNED",
+            "Helper2Name": "UNASSIGNED",
+            "VehicleID": 0,
+            "VehicleNumber": "UNASSIGNED",
+            "ScheduledYards": 939.0,
+            "ScheduledStops": 266.0,
+            "ScheduledLifts": 313.0,
+            "HelperRoute": false,
+            "CompanyName": "SOUTH FL HAULING",
+            "Details": [
+              {
+                "StopHeaderID": 988975,
+                "RouteStopID": 29223,
+                "RouteSequence": 0,
+                "CustomerID": 4674000,
+                "CustomerName": "DELMAR MOTEL APARTMENTS",
+                "Address": "325 ARTHUR ST",
+                "City": "HOLLYWOOD",
+                "State": "FL",
+                "Zip": "33019",
+                "Quantity": 1.0,
+                "ScheduleSize": 3.0,
+                "UnitSizeValue": 3.0,
+                "UnitSizeName": "YD",
+                "CustServicePhone": "502-488-2402",
+                "CustServiceContact": "",
+                "ServiceNotes": "",
+                "RouteNotes": "Watch for LOW Overhead wires!",
+                "MaterialTransCode": "1234",
+                "TransCode": "FL-3-MSW",
+                "TransDesc": "FL 3YD WASTE SERVICE",
+                "AccountStatus": "ACTIVE-CREDIT",
+                "ServiceDate": "2022-10-03",
+                "ServiceDirections": "DELMAR MOTEL APARTMENTS IS LOCATED AT THE NW CORNER OF ARTHUR ST IN THE CITY OF HOLLYWOOD",
+                "PauseRoute": false,
+                "ActivePricingID": 3232,
+                "BusinessEmail": "NATRO2000@YAHOO.COM",
+                "BusinessPhone": "502-488-2402",
+                "BusinessFax": "808-395-0186",
+                "CustomerLatitude": "26.0229265469847",
+                "CustomerLongitude": "-80.1155861964525",
+                "CompanyName": "SOUTH FL HAULING",
+                "PriceArea": "BROWARD-AREA",
+                "Units": [
+                  {
+                    "UnitID": 4107,
+                    "SerialID": "968675402001",
+                    "RFID": "",
+                    "CurrentLatitude": "0",
+                    "CurrentLongitude": "0"
+                  }
+                ],
+                "Lifts": [
+                  {
+                    "StopUnitDetailID": 1479555,
+                    "TransCode": "FL-3-MSW",
+                    "TransDesc": "FL 3YD WASTE SERVICE",
+                    "ScheduledUnits": 1.0,
+                    "ScheduledSize": 3.0,
+                    "ScheduledService": "FL 3YD WASTE SERVICE | 3 @ 1.00x/wk",
+                    "IsHelperStop": false,
+                    "Unit": {
+                      "UnitID": 4107,
+                      "SerialID": "968675402001",
+                      "RFID": "",
+                      "CurrentLatitude": "0",
+                      "CurrentLongitude": "0"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ]
+    }
+  },
+  "examples": [
+    {
+      "Source": "com.routeware.encore",
+      "Tenant": "00000000-0000-0000-0000-000000000000",
+      "MessageType": "Route",
+      "UUID": "69307430-8ced-4d9c-9de3-467ac6542c70",
+      "AsOf": "2022-10-06T17:04:07.9505334-04:00",
+      "Data": [
+        {
+          "RouteHeaderID": 289984,
+          "RouteDate": "2022-10-03",
+          "RouteDay": "MONDAY",
+          "RouteID": 3256,
+          "RouteName": "M-FL019-3",
+          "RouteStatus": "SCHEDULED",
+          "RouteType": "COM-FL",
+          "DriverID": 165,
+          "DriverName": "Park",
+          "CompanyID": 3,
+          "Helper1Name": "UNASSIGNED",
+          "Helper2Name": "UNASSIGNED",
+          "VehicleID": 0,
+          "VehicleNumber": "UNASSIGNED",
+          "ScheduledYards": 939.0,
+          "ScheduledStops": 266.0,
+          "ScheduledLifts": 313.0,
+          "HelperRoute": false,
+          "CompanyName": "SOUTH FL HAULING",
+          "Details": [
+            {
+              "StopHeaderID": 988975,
+              "RouteStopID": 29223,
+              "RouteSequence": 0,
+              "CustomerID": 4674000,
+              "CustomerName": "DELMAR MOTEL APARTMENTS",
+              "Address": "325 ARTHUR ST",
+              "City": "HOLLYWOOD",
+              "State": "FL",
+              "Zip": "33019",
+              "Quantity": 1.0,
+              "ScheduleSize": 3.0,
+              "UnitSizeValue": 3.0,
+              "UnitSizeName": "YD",
+              "CustServicePhone": "502-488-2402",
+              "CustServiceContact": "",
+              "ServiceNotes": "",
+              "RouteNotes": "Watch for LOW Overhead wires!",
+              "MaterialTransCode": "1234",
+              "TransCode": "FL-3-MSW",
+              "TransDesc": "FL 3YD WASTE SERVICE",
+              "AccountStatus": "ACTIVE-CREDIT",
+              "ServiceDate": "2022-10-03",
+              "ServiceDirections": "DELMAR MOTEL APARTMENTS IS LOCATED AT THE NW CORNER OF ARTHUR ST IN THE CITY OF HOLLYWOOD",
+              "PauseRoute": false,
+              "ActivePricingID": 3232,
+              "BusinessEmail": "NATRO2000@YAHOO.COM",
+              "BusinessPhone": "502-488-2402",
+              "BusinessFax": "808-395-0186",
+              "CustomerLatitude": "26.0229265469847",
+              "CustomerLongitude": "-80.1155861964525",
+              "CompanyName": "SOUTH FL HAULING",
+              "PriceArea": "BROWARD-AREA",
+              "Units": [
+                {
+                  "UnitID": 4107,
+                  "SerialID": "968675402001",
+                  "RFID": "",
+                  "CurrentLatitude": "0",
+                  "CurrentLongitude": "0"
+                }
+              ],
+              "Lifts": [
+                {
+                  "StopUnitDetailID": 1479555,
+                  "TransCode": "FL-3-MSW",
+                  "TransDesc": "FL 3YD WASTE SERVICE",
+                  "ScheduledUnits": 1.0,
+                  "ScheduledSize": 3.0,
+                  "ScheduledService": "FL 3YD WASTE SERVICE | 3 @ 1.00x/wk",
+                  "IsHelperStop": false,
+                  "Unit": {
+                    "UnitID": 4107,
+                    "SerialID": "968675402001",
+                    "RFID": "",
+                    "CurrentLatitude": "0",
+                    "CurrentLongitude": "0"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
