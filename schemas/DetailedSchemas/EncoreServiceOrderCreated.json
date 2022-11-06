@@ -1,0 +1,1034 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Detailed Encore Service Created Schema",
+  "required": [
+    "Source",
+    "Tenant",
+    "MessageType",
+    "UUID",
+    "AsOf",
+    "Data"
+  ],
+  "properties": {
+    "Source": {
+      "type": "string",
+      "default": "",
+      "title": "The Source Schema",
+      "examples": [
+        "com.routeware.encore"
+      ]
+    },
+    "Tenant": {
+      "type": "string",
+      "default": "",
+      "title": "The Tenant Schema",
+      "examples": [
+        "00000000-0000-0000-0000-000000000000"
+      ]
+    },
+    "MessageType": {
+      "type": "string",
+      "default": "",
+      "title": "The MessageType Schema",
+      "examples": [
+        "ServiceOrder"
+      ]
+    },
+    "UUID": {
+      "type": "string",
+      "default": "",
+      "title": "The UUID Schema",
+      "examples": [
+        "3e496f6a-ab06-49bd-91d1-75268ce30f01"
+      ]
+    },
+    "AsOf": {
+      "type": "string",
+      "default": "",
+      "title": "The AsOf Schema",
+      "examples": [
+        "2022-09-26T16:10:06.886407-04:00"
+      ]
+    },
+    "Data": {
+      "type": "array",
+      "default": [],
+      "title": "The Data Schema",
+      "items": {
+        "type": "object",
+        "default": {},
+        "title": "A Schema",
+        "required": [
+          "RouteHeaderID",
+          "RouteID",
+          "ServiceOrderID",
+          "ServiceDate",
+          "SequenceNumber",
+          "CustomerID",
+          "TransCode",
+          "TransDesc",
+          "Quantity",
+          "ServiceInstructions",
+          "RouteName",
+          "RouteStatus",
+          "RouteType",
+          "DriverID",
+          "DriverName",
+          "CompanyID",
+          "VehicleID",
+          "VehicleNumber",
+          "OrderAction",
+          "Address",
+          "City",
+          "State",
+          "Zip",
+          "CustServicePhone",
+          "CustServiceContact",
+          "CustomerName",
+          "CustomerName2",
+          "ServiceDirections",
+          "AccountStatus",
+          "CustomerTypeID",
+          "CustomerTypeName",
+          "CustPriceQuantity",
+          "SizeValue",
+          "ServiceFrequency",
+          "ServiceFrequencyName",
+          "ServiceNotes",
+          "OrderPriority",
+          "CustPricingSizeName",
+          "TransCodeSizeID",
+          "ServOrderSizeName",
+          "MaterialTransCode",
+          "CustomerLatitude",
+          "CustomerLongitude",
+          "CompanyName",
+          "AssignedUnitID",
+          "UnassignedUnitID",
+          "ServiceUnitID",
+          "Details",
+          "AssignedUnit",
+          "UnassignedUnit",
+          "ServiceUnit"
+        ],
+        "properties": {
+          "RouteHeaderID": {
+            "type": "integer",
+            "default": 0,
+            "title": "The RouteHeaderID Schema",
+            "examples": [
+              37709
+            ]
+          },
+          "RouteID": {
+            "type": "integer",
+            "default": 0,
+            "title": "The RouteID Schema",
+            "examples": [
+              3278
+            ]
+          },
+          "ServiceOrderID": {
+            "type": "integer",
+            "default": 0,
+            "title": "The ServiceOrderID Schema",
+            "examples": [
+              500035
+            ]
+          },
+          "ServiceDate": {
+            "type": "string",
+            "default": "",
+            "title": "The ServiceDate Schema",
+            "examples": [
+              "2022-07-05T00:00:00"
+            ]
+          },
+          "SequenceNumber": {
+            "type": "integer",
+            "default": 0,
+            "title": "The SequenceNumber Schema",
+            "examples": [
+              0
+            ]
+          },
+          "CustomerID": {
+            "type": "integer",
+            "default": 0,
+            "title": "The CustomerID Schema",
+            "examples": [
+              5263700
+            ]
+          },
+          "TransCode": {
+            "type": "string",
+            "default": "",
+            "title": "The TransCode Schema",
+            "examples": [
+              "96T"
+            ]
+          },
+          "TransDesc": {
+            "type": "string",
+            "default": "",
+            "title": "The TransDesc Schema",
+            "examples": [
+              "96-GALLON-TRASH"
+            ]
+          },
+          "Quantity": {
+            "type": "number",
+            "default": 0.0,
+            "title": "The Quantity Schema",
+            "examples": [
+              1.0
+            ]
+          },
+          "ServiceInstructions": {
+            "type": "string",
+            "default": "",
+            "title": "The ServiceInstructions Schema",
+            "examples": [
+              "SEA AIR VILLAS IS LOCATED AT THE NW CORNER OF S OCEAN BLVD IN THE CITY OF DELRAY BEACH"
+            ]
+          },
+          "RouteName": {
+            "type": "string",
+            "default": "",
+            "title": "The RouteName Schema",
+            "examples": [
+              "T-FL177-1"
+            ]
+          },
+          "RouteStatus": {
+            "type": "string",
+            "default": "",
+            "title": "The RouteStatus Schema",
+            "examples": [
+              "DONE-EMOBILE"
+            ]
+          },
+          "RouteType": {
+            "type": "string",
+            "default": "",
+            "title": "The RouteType Schema",
+            "examples": [
+              "COM-FL"
+            ]
+          },
+          "DriverID": {
+            "type": "integer",
+            "default": 0,
+            "title": "The DriverID Schema",
+            "examples": [
+              232
+            ]
+          },
+          "DriverName": {
+            "type": "string",
+            "default": "",
+            "title": "The DriverName Schema",
+            "examples": [
+              "SHammond"
+            ]
+          },
+          "CompanyID": {
+            "type": "integer",
+            "default": 0,
+            "title": "The CompanyID Schema",
+            "examples": [
+              3
+            ]
+          },
+          "VehicleID": {
+            "type": "integer",
+            "default": 0,
+            "title": "The VehicleID Schema",
+            "examples": [
+              1318
+            ]
+          },
+          "VehicleNumber": {
+            "type": "string",
+            "default": "",
+            "title": "The VehicleNumber Schema",
+            "examples": [
+              "SH_Test"
+            ]
+          },
+          "OrderAction": {
+            "type": "string",
+            "default": "",
+            "title": "The OrderAction Schema",
+            "examples": [
+              "NONE"
+            ]
+          },
+          "Address": {
+            "type": "string",
+            "default": "",
+            "title": "The Address Schema",
+            "examples": [
+              "1715 S OCEAN BLVD"
+            ]
+          },
+          "City": {
+            "type": "string",
+            "default": "",
+            "title": "The City Schema",
+            "examples": [
+              "DELRAY BEACH"
+            ]
+          },
+          "State": {
+            "type": "string",
+            "default": "",
+            "title": "The State Schema",
+            "examples": [
+              "FL"
+            ]
+          },
+          "Zip": {
+            "type": "string",
+            "default": "",
+            "title": "The Zip Schema",
+            "examples": [
+              "33483"
+            ]
+          },
+          "CustServicePhone": {
+            "type": "string",
+            "default": "",
+            "title": "The CustServicePhone Schema",
+            "examples": [
+              "984-698-5121"
+            ]
+          },
+          "CustServiceContact": {
+            "type": "string",
+            "default": "",
+            "title": "The CustServiceContact Schema",
+            "examples": [
+              ""
+            ]
+          },
+          "CustomerName": {
+            "type": "string",
+            "default": "",
+            "title": "The CustomerName Schema",
+            "examples": [
+              "SEA AIR VILLAS"
+            ]
+          },
+          "CustomerName2": {
+            "type": "string",
+            "default": "",
+            "title": "The CustomerName2 Schema",
+            "examples": [
+              ""
+            ]
+          },
+          "ServiceDirections": {
+            "type": "string",
+            "default": "",
+            "title": "The ServiceDirections Schema",
+            "examples": [
+              "SEA AIR VILLAS IS LOCATED AT THE NW CORNER OF S OCEAN BLVD IN THE CITY OF DELRAY BEACH"
+            ]
+          },
+          "AccountStatus": {
+            "type": "string",
+            "default": "",
+            "title": "The AccountStatus Schema",
+            "examples": [
+              "ACTIVE"
+            ]
+          },
+          "CustomerTypeID": {
+            "type": "integer",
+            "default": 0,
+            "title": "The CustomerTypeID Schema",
+            "examples": [
+              1
+            ]
+          },
+          "CustomerTypeName": {
+            "type": "string",
+            "default": "",
+            "title": "The CustomerTypeName Schema",
+            "examples": [
+              "COMM/OFL"
+            ]
+          },
+          "CustPriceQuantity": {
+            "type": "number",
+            "default": 0.0,
+            "title": "The CustPriceQuantity Schema",
+            "examples": [
+              0.0
+            ]
+          },
+          "SizeValue": {
+            "type": "number",
+            "default": 0.0,
+            "title": "The SizeValue Schema",
+            "examples": [
+              0.0
+            ]
+          },
+          "ServiceFrequency": {
+            "type": "number",
+            "default": 0.0,
+            "title": "The ServiceFrequency Schema",
+            "examples": [
+              0.0
+            ]
+          },
+          "ServiceFrequencyName": {
+            "type": "string",
+            "default": "",
+            "title": "The ServiceFrequencyName Schema",
+            "examples": [
+              "TEST"
+            ]
+          },
+          "ServiceNotes": {
+            "type": "string",
+            "default": "",
+            "title": "The ServiceNotes Schema",
+            "examples": [
+              "TEST"
+            ]
+          },
+          "OrderPriority": {
+            "type": "string",
+            "default": "",
+            "title": "The OrderPriority Schema",
+            "examples": [
+              "NORMAL"
+            ]
+          },
+          "CustPricingSizeName": {
+            "type": "string",
+            "default": "",
+            "title": "The CustPricingSizeName Schema",
+            "examples": [
+              "TEST"
+            ]
+          },
+          "TransCodeSizeID": {
+            "type": "integer",
+            "default": 0,
+            "title": "The TransCodeSizeID Schema",
+            "examples": [
+              30
+            ]
+          },
+          "ServOrderSizeName": {
+            "type": "string",
+            "default": "",
+            "title": "The ServOrderSizeName Schema",
+            "examples": [
+              "GAL"
+            ]
+          },
+          "MaterialTransCode": {
+            "type": "string",
+            "default": "",
+            "title": "The MaterialTransCode Schema",
+            "examples": [
+              "TEST"
+            ]
+          },
+          "CustomerLatitude": {
+            "type": "string",
+            "default": "",
+            "title": "The CustomerLatitude Schema",
+            "examples": [
+              "26.4406501687808"
+            ]
+          },
+          "CustomerLongitude": {
+            "type": "string",
+            "default": "",
+            "title": "The CustomerLongitude Schema",
+            "examples": [
+              "-80.0622819226652"
+            ]
+          },
+          "CompanyName": {
+            "type": "string",
+            "default": "",
+            "title": "The CompanyName Schema",
+            "examples": [
+              "SE HAULING"
+            ]
+          },
+          "AssignedUnitID": {
+            "type": "integer",
+            "default": 0,
+            "title": "The AssignedUnitID Schema",
+            "examples": [
+              4107
+            ]
+          },
+          "UnassignedUnitID": {
+            "type": "integer",
+            "default": 0,
+            "title": "The UnassignedUnitID Schema",
+            "examples": [
+              0
+            ]
+          },
+          "ServiceUnitID": {
+            "type": "integer",
+            "default": 0,
+            "title": "The ServiceUnitID Schema",
+            "examples": [
+              0
+            ]
+          },
+          "Details": {
+            "type": "array",
+            "default": [],
+            "title": "The Details Schema",
+            "items": {
+              "type": "object",
+              "default": {},
+              "title": "A Schema",
+              "required": [
+                "ServiceOrderDetailID",
+                "TransCode",
+                "TransDesc",
+                "Quantity",
+                "UnitPrice",
+                "UnitCost"
+              ],
+              "properties": {
+                "ServiceOrderDetailID": {
+                  "type": "integer",
+                  "default": 0,
+                  "title": "The ServiceOrderDetailID Schema",
+                  "examples": [
+                    36
+                  ]
+                },
+                "TransCode": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The TransCode Schema",
+                  "examples": [
+                    "96T"
+                  ]
+                },
+                "TransDesc": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The TransDesc Schema",
+                  "examples": [
+                    "96-GALLON-TRASH"
+                  ]
+                },
+                "Quantity": {
+                  "type": "number",
+                  "default": 0.0,
+                  "title": "The Quantity Schema",
+                  "examples": [
+                    1.0
+                  ]
+                },
+                "UnitPrice": {
+                  "type": "number",
+                  "default": 0.0,
+                  "title": "The UnitPrice Schema",
+                  "examples": [
+                    100.0
+                  ]
+                },
+                "UnitCost": {
+                  "type": "number",
+                  "default": 0.0,
+                  "title": "The UnitCost Schema",
+                  "examples": [
+                    0.0
+                  ]
+                }
+              },
+              "examples": [
+                {
+                  "ServiceOrderDetailID": 36,
+                  "TransCode": "96T",
+                  "TransDesc": "96-GALLON-TRASH",
+                  "Quantity": 1.0,
+                  "UnitPrice": 100.0,
+                  "UnitCost": 0.0
+                }
+              ]
+            },
+            "examples": [
+              [
+                {
+                  "ServiceOrderDetailID": 36,
+                  "TransCode": "96T",
+                  "TransDesc": "96-GALLON-TRASH",
+                  "Quantity": 1.0,
+                  "UnitPrice": 100.0,
+                  "UnitCost": 0.0
+                }
+              ]
+            ]
+          },
+          "AssignedUnit": {
+            "type": "object",
+            "default": {},
+            "title": "The AssignedUnit Schema",
+            "required": [
+              "UnitID",
+              "SerialID",
+              "RFID",
+              "CurrentLatitude",
+              "CurrentLongitude"
+            ],
+            "properties": {
+              "UnitID": {
+                "type": "integer",
+                "default": 0,
+                "title": "The UnitID Schema",
+                "examples": [
+                  4107
+                ]
+              },
+              "SerialID": {
+                "type": "string",
+                "default": "",
+                "title": "The SerialID Schema",
+                "examples": [
+                  "968675402001"
+                ]
+              },
+              "RFID": {
+                "type": "string",
+                "default": "",
+                "title": "The RFID Schema",
+                "examples": [
+                  ""
+                ]
+              },
+              "CurrentLatitude": {
+                "type": "string",
+                "default": "",
+                "title": "The CurrentLatitude Schema",
+                "examples": [
+                  "0"
+                ]
+              },
+              "CurrentLongitude": {
+                "type": "string",
+                "default": "",
+                "title": "The CurrentLongitude Schema",
+                "examples": [
+                  "0"
+                ]
+              }
+            },
+            "examples": [
+              {
+                "UnitID": 4107,
+                "SerialID": "968675402001",
+                "RFID": "",
+                "CurrentLatitude": "0",
+                "CurrentLongitude": "0"
+              }
+            ]
+          },
+          "UnassignedUnit": {
+            "type": "object",
+            "default": {},
+            "title": "The UnassignedUnit Schema",
+            "required": [
+              "UnitID",
+              "SerialID",
+              "RFID",
+              "CurrentLatitude",
+              "CurrentLongitude"
+            ],
+            "properties": {
+              "UnitID": {
+                "type": "integer",
+                "default": 0,
+                "title": "The UnitID Schema",
+                "examples": [
+                  4107
+                ]
+              },
+              "SerialID": {
+                "type": "string",
+                "default": "",
+                "title": "The SerialID Schema",
+                "examples": [
+                  "968675402001"
+                ]
+              },
+              "RFID": {
+                "type": "string",
+                "default": "",
+                "title": "The RFID Schema",
+                "examples": [
+                  ""
+                ]
+              },
+              "CurrentLatitude": {
+                "type": "string",
+                "default": "",
+                "title": "The CurrentLatitude Schema",
+                "examples": [
+                  "0"
+                ]
+              },
+              "CurrentLongitude": {
+                "type": "string",
+                "default": "",
+                "title": "The CurrentLongitude Schema",
+                "examples": [
+                  "0"
+                ]
+              }
+            },
+            "examples": [
+              {
+                "UnitID": 4107,
+                "SerialID": "968675402001",
+                "RFID": "",
+                "CurrentLatitude": "0",
+                "CurrentLongitude": "0"
+              }
+            ]
+          },
+          "ServiceUnit": {
+            "type": "object",
+            "default": {},
+            "title": "The ServiceUnit Schema",
+            "required": [
+              "UnitID",
+              "SerialID",
+              "RFID",
+              "CurrentLatitude",
+              "CurrentLongitude"
+            ],
+            "properties": {
+              "UnitID": {
+                "type": "integer",
+                "default": 0,
+                "title": "The UnitID Schema",
+                "examples": [
+                  4107
+                ]
+              },
+              "SerialID": {
+                "type": "string",
+                "default": "",
+                "title": "The SerialID Schema",
+                "examples": [
+                  "968675402001"
+                ]
+              },
+              "RFID": {
+                "type": "string",
+                "default": "",
+                "title": "The RFID Schema",
+                "examples": [
+                  ""
+                ]
+              },
+              "CurrentLatitude": {
+                "type": "string",
+                "default": "",
+                "title": "The CurrentLatitude Schema",
+                "examples": [
+                  "0"
+                ]
+              },
+              "CurrentLongitude": {
+                "type": "string",
+                "default": "",
+                "title": "The CurrentLongitude Schema",
+                "examples": [
+                  "0"
+                ]
+              }
+            },
+            "examples": [
+              {
+                "UnitID": 4107,
+                "SerialID": "968675402001",
+                "RFID": "",
+                "CurrentLatitude": "0",
+                "CurrentLongitude": "0"
+              }
+            ]
+          }
+        },
+        "examples": [
+          {
+            "RouteHeaderID": 37709,
+            "RouteID": 3278,
+            "ServiceOrderID": 500035,
+            "ServiceDate": "2022-07-05T00:00:00",
+            "SequenceNumber": 0,
+            "CustomerID": 5263700,
+            "TransCode": "96T",
+            "TransDesc": "96-GALLON-TRASH",
+            "Quantity": 1.0,
+            "ServiceInstructions": "SEA AIR VILLAS IS LOCATED AT THE NW CORNER OF S OCEAN BLVD IN THE CITY OF DELRAY BEACH",
+            "RouteName": "T-FL177-1",
+            "RouteStatus": "DONE-EMOBILE",
+            "RouteType": "COM-FL",
+            "DriverID": 232,
+            "DriverName": "SHammond",
+            "CompanyID": 3,
+            "VehicleID": 1318,
+            "VehicleNumber": "SH_Test",
+            "OrderAction": "NONE",
+            "Address": "1715 S OCEAN BLVD",
+            "City": "DELRAY BEACH",
+            "State": "FL",
+            "Zip": "33483",
+            "CustServicePhone": "984-698-5121",
+            "CustServiceContact": "",
+            "CustomerName": "SEA AIR VILLAS",
+            "CustomerName2": "",
+            "ServiceDirections": "SEA AIR VILLAS IS LOCATED AT THE NW CORNER OF S OCEAN BLVD IN THE CITY OF DELRAY BEACH",
+            "AccountStatus": "ACTIVE",
+            "CustomerTypeID": 1,
+            "CustomerTypeName": "COMM/OFL",
+            "CustPriceQuantity": 0.0,
+            "SizeValue": 0.0,
+            "ServiceFrequency": 0.0,
+            "ServiceFrequencyName": "TEST",
+            "ServiceNotes": "TEST",
+            "OrderPriority": "NORMAL",
+            "CustPricingSizeName": "TEST",
+            "TransCodeSizeID": 30,
+            "ServOrderSizeName": "GAL",
+            "MaterialTransCode": "TEST",
+            "CustomerLatitude": "26.4406501687808",
+            "CustomerLongitude": "-80.0622819226652",
+            "CompanyName": "SE HAULING",
+            "AssignedUnitID": 4107,
+            "UnassignedUnitID": 0,
+            "ServiceUnitID": 0,
+            "Details": [
+              {
+                "ServiceOrderDetailID": 36,
+                "TransCode": "96T",
+                "TransDesc": "96-GALLON-TRASH",
+                "Quantity": 1.0,
+                "UnitPrice": 100.0,
+                "UnitCost": 0.0
+              }
+            ],
+            "AssignedUnit": {
+              "UnitID": 4107,
+              "SerialID": "968675402001",
+              "RFID": "",
+              "CurrentLatitude": "0",
+              "CurrentLongitude": "0"
+            },
+            "UnassignedUnit": {
+              "UnitID": 4107,
+              "SerialID": "968675402001",
+              "RFID": "",
+              "CurrentLatitude": "0",
+              "CurrentLongitude": "0"
+            },
+            "ServiceUnit": {
+              "UnitID": 4107,
+              "SerialID": "968675402001",
+              "RFID": "",
+              "CurrentLatitude": "0",
+              "CurrentLongitude": "0"
+            }
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "RouteHeaderID": 37709,
+            "RouteID": 3278,
+            "ServiceOrderID": 500035,
+            "ServiceDate": "2022-07-05T00:00:00",
+            "SequenceNumber": 0,
+            "CustomerID": 5263700,
+            "TransCode": "96T",
+            "TransDesc": "96-GALLON-TRASH",
+            "Quantity": 1.0,
+            "ServiceInstructions": "SEA AIR VILLAS IS LOCATED AT THE NW CORNER OF S OCEAN BLVD IN THE CITY OF DELRAY BEACH",
+            "RouteName": "T-FL177-1",
+            "RouteStatus": "DONE-EMOBILE",
+            "RouteType": "COM-FL",
+            "DriverID": 232,
+            "DriverName": "SHammond",
+            "CompanyID": 3,
+            "VehicleID": 1318,
+            "VehicleNumber": "SH_Test",
+            "OrderAction": "NONE",
+            "Address": "1715 S OCEAN BLVD",
+            "City": "DELRAY BEACH",
+            "State": "FL",
+            "Zip": "33483",
+            "CustServicePhone": "984-698-5121",
+            "CustServiceContact": "",
+            "CustomerName": "SEA AIR VILLAS",
+            "CustomerName2": "",
+            "ServiceDirections": "SEA AIR VILLAS IS LOCATED AT THE NW CORNER OF S OCEAN BLVD IN THE CITY OF DELRAY BEACH",
+            "AccountStatus": "ACTIVE",
+            "CustomerTypeID": 1,
+            "CustomerTypeName": "COMM/OFL",
+            "CustPriceQuantity": 0.0,
+            "SizeValue": 0.0,
+            "ServiceFrequency": 0.0,
+            "ServiceFrequencyName": "TEST",
+            "ServiceNotes": "TEST",
+            "OrderPriority": "NORMAL",
+            "CustPricingSizeName": "TEST",
+            "TransCodeSizeID": 30,
+            "ServOrderSizeName": "GAL",
+            "MaterialTransCode": "TEST",
+            "CustomerLatitude": "26.4406501687808",
+            "CustomerLongitude": "-80.0622819226652",
+            "CompanyName": "SE HAULING",
+            "AssignedUnitID": 4107,
+            "UnassignedUnitID": 0,
+            "ServiceUnitID": 0,
+            "Details": [
+              {
+                "ServiceOrderDetailID": 36,
+                "TransCode": "96T",
+                "TransDesc": "96-GALLON-TRASH",
+                "Quantity": 1.0,
+                "UnitPrice": 100.0,
+                "UnitCost": 0.0
+              }
+            ],
+            "AssignedUnit": {
+              "UnitID": 4107,
+              "SerialID": "968675402001",
+              "RFID": "",
+              "CurrentLatitude": "0",
+              "CurrentLongitude": "0"
+            },
+            "UnassignedUnit": {
+              "UnitID": 4107,
+              "SerialID": "968675402001",
+              "RFID": "",
+              "CurrentLatitude": "0",
+              "CurrentLongitude": "0"
+            },
+            "ServiceUnit": {
+              "UnitID": 4107,
+              "SerialID": "968675402001",
+              "RFID": "",
+              "CurrentLatitude": "0",
+              "CurrentLongitude": "0"
+            }
+          }
+        ]
+      ]
+    }
+  },
+  "examples": [
+    {
+      "Source": "com.routeware.encore",
+      "Tenant": "00000000-0000-0000-0000-000000000000",
+      "MessageType": "ServiceOrder",
+      "UUID": "3e496f6a-ab06-49bd-91d1-75268ce30f01",
+      "AsOf": "2022-09-26T16:10:06.886407-04:00",
+      "Data": [
+        {
+          "RouteHeaderID": 37709,
+          "RouteID": 3278,
+          "ServiceOrderID": 500035,
+          "ServiceDate": "2022-07-05T00:00:00",
+          "SequenceNumber": 0,
+          "CustomerID": 5263700,
+          "TransCode": "96T",
+          "TransDesc": "96-GALLON-TRASH",
+          "Quantity": 1.0,
+          "ServiceInstructions": "SEA AIR VILLAS IS LOCATED AT THE NW CORNER OF S OCEAN BLVD IN THE CITY OF DELRAY BEACH",
+          "RouteName": "T-FL177-1",
+          "RouteStatus": "DONE-EMOBILE",
+          "RouteType": "COM-FL",
+          "DriverID": 232,
+          "DriverName": "SHammond",
+          "CompanyID": 3,
+          "VehicleID": 1318,
+          "VehicleNumber": "SH_Test",
+          "OrderAction": "NONE",
+          "Address": "1715 S OCEAN BLVD",
+          "City": "DELRAY BEACH",
+          "State": "FL",
+          "Zip": "33483",
+          "CustServicePhone": "984-698-5121",
+          "CustServiceContact": "",
+          "CustomerName": "SEA AIR VILLAS",
+          "CustomerName2": "",
+          "ServiceDirections": "SEA AIR VILLAS IS LOCATED AT THE NW CORNER OF S OCEAN BLVD IN THE CITY OF DELRAY BEACH",
+          "AccountStatus": "ACTIVE",
+          "CustomerTypeID": 1,
+          "CustomerTypeName": "COMM/OFL",
+          "CustPriceQuantity": 0.0,
+          "SizeValue": 0.0,
+          "ServiceFrequency": 0.0,
+          "ServiceFrequencyName": "TEST",
+          "ServiceNotes": "TEST",
+          "OrderPriority": "NORMAL",
+          "CustPricingSizeName": "TEST",
+          "TransCodeSizeID": 30,
+          "ServOrderSizeName": "GAL",
+          "MaterialTransCode": "TEST",
+          "CustomerLatitude": "26.4406501687808",
+          "CustomerLongitude": "-80.0622819226652",
+          "CompanyName": "SE HAULING",
+          "AssignedUnitID": 4107,
+          "UnassignedUnitID": 0,
+          "ServiceUnitID": 0,
+          "Details": [
+            {
+              "ServiceOrderDetailID": 36,
+              "TransCode": "96T",
+              "TransDesc": "96-GALLON-TRASH",
+              "Quantity": 1.0,
+              "UnitPrice": 100.0,
+              "UnitCost": 0.0
+            }
+          ],
+          "AssignedUnit": {
+            "UnitID": 4107,
+            "SerialID": "968675402001",
+            "RFID": "",
+            "CurrentLatitude": "0",
+            "CurrentLongitude": "0"
+          },
+          "UnassignedUnit": {
+            "UnitID": 4107,
+            "SerialID": "968675402001",
+            "RFID": "",
+            "CurrentLatitude": "0",
+            "CurrentLongitude": "0"
+          },
+          "ServiceUnit": {
+            "UnitID": 4107,
+            "SerialID": "968675402001",
+            "RFID": "",
+            "CurrentLatitude": "0",
+            "CurrentLongitude": "0"
+          }
+        }
+      ]
+    }
+  ]
+}
