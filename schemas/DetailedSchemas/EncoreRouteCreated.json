@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "http://example.com/example.json",
+  "$id": "com.routeware.eventbus.DetailedSchemas",
   "type": "object",
   "default": {},
   "title": "Detailed Encore Route Created Schema",
