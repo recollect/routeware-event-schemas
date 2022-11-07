@@ -3,7 +3,7 @@
   "$id": "com.routeware.eventbus.EncoreRouteCreated",
   "type": "object",
   "default": {},
-  "title": "Integration Created",
+  "title": "Schema for EncoreRouteCreated event",
   "required": [
     "UUID",
     "URL"
@@ -12,15 +12,15 @@
     "UUID": {
       "type": "string",
       "default": "",
-      "title": "The UUID Schema",
+      "title": "Unique ID of the event",
       "examples": [
         "08f40e47-252d-43df-ba40-daf6c4722ec2"
       ]
     },
-    "URL": {
+    "LinkedDetailURL": {
       "type": "string",
       "default": "",
-      "title": "The URL Schema",
+      "title": "URL Linking to the Detailed schema in blob storage; EncoreRouteDetailCreated",
       "examples": [
         "https://corerccintegration.blob.core.windows.net/integrationjson/69307430-8ced-4d9c-9de3-467ac6542c70.json?sv=2021-08-06\u0026se=2022-10-06T21:09:08Z\u0026sr=b\u0026sp=r\u0026sig=uzkPHghYoLl+cVtCY8q8Q0pnfOtB62GOtfJgtRYPIDU="
       ]
