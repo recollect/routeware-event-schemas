@@ -5,31 +5,61 @@
   "default": {},
   "title": "Schema for EncoreRouteCreated event",
   "required": [
+    "Source",
+    "MessageType",
     "UUID",
+    "as_of",
     "URL"
   ],
   "properties": {
+    "Source": {
+      "type": "string",
+      "default": "",
+      "title": "The Source, which should be com.routeware.encore",
+      "examples": [
+        "com.routeware.encore"
+      ]
+    },
+    "MessageType": {
+      "type": "string",
+      "default": "",
+      "title": "The Message Type, which should be Route",
+      "examples": [
+        "Route"
+      ]
+    },
     "UUID": {
       "type": "string",
       "default": "",
       "title": "Unique ID of the event",
       "examples": [
-        "08f40e47-252d-43df-ba40-daf6c4722ec2"
+        "dee3f3f9-ca7f-4eee-bf32-ad2efc58f3a9"
       ]
     },
-    "LinkedDetailURL": {
+    "as_of": {
+      "type": "string",
+      "default": "",
+      "title": "The time in DateTimeOffset format the event was created",
+      "examples": [
+        "2022-11-08T11:22:14.0445446-05:00"
+      ]
+    },
+    "URL": {
       "type": "string",
       "default": "",
       "title": "URL Linking to the Detailed schema in blob storage; EncoreRouteDetailCreated",
       "examples": [
-        "https://corerccintegration.blob.core.windows.net/integrationjson/69307430-8ced-4d9c-9de3-467ac6542c70.json?sv=2021-08-06\u0026se=2022-10-06T21:09:08Z\u0026sr=b\u0026sp=r\u0026sig=uzkPHghYoLl+cVtCY8q8Q0pnfOtB62GOtfJgtRYPIDU="
+        "https://corerccintegration.blob.core.windows.net/integrationjson/dee3f3f9-ca7f-4eee-bf32-ad2efc58f3a9.json?sv=2021-08-06\u0026se=2022-11-08T16%3A27%3A14Z\u0026sr=b\u0026sp=r\u0026sig=%2F9t0NdXI3FsJieuhF4CTQMo71gWMJnpau0kJEOz1IXA%3D"
       ]
     }
   },
   "examples": [
     {
-      "UUID": "08f40e47-252d-43df-ba40-daf6c4722ec2",
-      "URL": "https://corerccintegration.blob.core.windows.net/integrationjson/69307430-8ced-4d9c-9de3-467ac6542c70.json?sv=2021-08-06\u0026se=2022-10-06T21:09:08Z\u0026sr=b\u0026sp=r\u0026sig=uzkPHghYoLl+cVtCY8q8Q0pnfOtB62GOtfJgtRYPIDU="
+      "Source": "com.routeware.encore",
+      "MessageType": "Route",
+      "UUID": "dee3f3f9-ca7f-4eee-bf32-ad2efc58f3a9",
+      "as_of": "2022-11-08T11:22:14.0445446-05:00",
+      "URL": "https://corerccintegration.blob.core.windows.net/integrationjson/dee3f3f9-ca7f-4eee-bf32-ad2efc58f3a9.json?sv=2021-08-06\u0026se=2022-11-08T16%3A27%3A14Z\u0026sr=b\u0026sp=r\u0026sig=%2F9t0NdXI3FsJieuhF4CTQMo71gWMJnpau0kJEOz1IXA%3D"
     }
   ]
 }
