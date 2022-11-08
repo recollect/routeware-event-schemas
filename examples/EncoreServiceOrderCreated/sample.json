@@ -1,4 +1,7 @@
 {
-  "UUID": "a4757c57-798c-41e3-a406-46f5585d71ac",
-  "URL": "https://corerccintegration.blob.core.windows.net/integrationjson/a4757c57-798c-41e3-a406-46f5585d71ac.json?sv=2021-08-06&se=2022-11-04T15%3A14%3A51Z&sr=b&sp=r&sig=FHS0sdzAE8OVCEkEhLUENNqF2MnYiGtnNG5GpHjKtNY="
+  "Source": "com.routeware.encore",
+  "MessageType": "ServiceOrder",
+  "UUID": "ee3f0468-d8f3-41f0-acf0-606c6c2b2e6d",
+  "as_of": "2022-11-08T14:06:08.7559318-05:00",
+  "URL": "https://corerccintegration.blob.core.windows.net/integrationjson/ee3f0468-d8f3-41f0-acf0-606c6c2b2e6d.json?sv=2021-08-06&se=2022-11-08T19%3A11%3A08Z&sr=b&sp=r&sig=7LsSyERfsawZg4o%2B8aw46%2F%2BJa10L7ZbS%2FFHl%2FtV%2FD0o%3D"
 }
