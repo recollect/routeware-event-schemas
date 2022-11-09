@@ -5,21 +5,12 @@
   "default": {},
   "title": "Schema for EncoreServiceOrderCreated event",
   "required": [
-    "Source",
     "MessageType",
     "UUID",
     "as_of",
     "URL"
   ],
   "properties": {
-    "Source": {
-      "type": "string",
-      "default": "",
-      "title": "The Source, which should be com.routeware.encore.[clientID]",
-      "examples": [
-        "com.routeware.encore.rel"
-      ]
-    },
     "MessageType": {
       "type": "string",
       "default": "",
@@ -55,7 +46,6 @@
   },
   "examples": [
     {
-      "Source": "com.routeware.encore.rel",
       "MessageType": "ServiceOrder",
       "UUID": "ee3f0468-d8f3-41f0-acf0-606c6c2b2e6d",
       "as_of": "2022-11-08T14:06:08.7559318-05:00",
